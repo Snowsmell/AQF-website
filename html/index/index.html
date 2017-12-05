@@ -1,27 +1,786 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<!--[if IE 8]><html class="ie8 lte9" lang="zh-CN"><![endif]-->
+<!--[if IE 9]><html class="ie9 lte9" lang="zh-CN"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="zh-CN">
+<!--<![endif]-->
 
 <head>
-    <meta charset="utf-8">
-    <meta name="renderer" content="webkit">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <title>RFP首页</title>
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="">
-    <link rel="shortcut icon" href="">
-    <!--[if lt IE 9]>
-        <script type="text/javascript" src="../../script/public/html5shiv.js"></script>
-        <script type="text/javascript" src="../../script/public/respond.min.js"></script>
-    <![endif]-->
-    
-    <link rel="stylesheet" href="../../css/index/index.css">
+  <meta charset="utf-8">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <title>AQF Index首页</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="">
+  <link rel="shortcut icon" href="">
+  <link rel="stylesheet" href="../../css/public/common.css">
+  <!--[if lt IE 9]>
+    <script type="text/javascript" src="../../script/public/html5shiv.js"></script>
+    <script type="text/javascript" src="http://gfedu.net/public/script/respond.min.js"></script>
+	<![endif]-->
+  <!-- 调用的jQuery　v1.7.2JS -->
+  <script type="text/javascript" src="../../script/public/jquery.min.js"></script>
+  <!-- 表单验证JS -->
+  <!-- <script type="text/javascript" src="../../script/public/bdscript.js"></script>
+  <script type="text/javascript" src="../../script/public/bdloginReg.js"></script>
+  <script type="text/javascript" src="../../script/public/bdpasswordCheck.js"></script> -->
+  <script type="text/javascript" src="../../script/public/headfoot.js"></script>
 
+  <!-- 本页用到的css和js -->
+  <link rel="stylesheet" href="../../css/index/index.css">
+  <script src="../../script/index/index.js"></script>
 </head>
-<body>
-  <header></header>
 
-  <footer></footer>
+<body>
+  <!-- AQF -->
+  <div class="gfeduh1">
+    <h1>金程教育AQF</h1>
+  </div>
+
+  <nav id="menu" class="mbnavadd">
+    <h2>
+      <a href="">
+        <img src="../../images/public/sidebarreg.png" alt="" />月里飘舞
+        <i class="icon-gfright">&#xe609;</i>
+      </a>
+    </h2>
+    <dl>
+      <dt class="selecded">
+        <a href="#" title="首页">首页</a>
+      </dt>
+      <dd>
+        <a href="" title="金程介绍">金程介绍</a>
+      </dd>
+      <dd>
+        <a href="" title="培训项目">培训项目</a>
+      </dd>
+      <dd>
+        <a href="" title="师资团队">师资团队</a>
+      </dd>
+      <dd>
+        <a href="" title="诚聘英才">诚聘英才</a>
+      </dd>
+      <dd>
+        <a href="" title="其他站点">其他站点</a>
+      </dd>
+    </dl>
+  </nav>
+
+  <div class="header">
+    <!-- topheader-->
+    <div class="topheader">
+      <article>
+        <h3>
+          <a href="javascript:;" id="alogin">登录</a>
+          <a href="javascript:;" id="aregister">注册</a>
+        </h3>
+        <h4 class="icon-bars">
+          <a href="#menu" id="sidelink">&#xf0c9;</a>
+        </h4>
+        <h6>
+          <nav>
+            <a id="logo" href="">
+              <img src="../../images/public/logo_02.png">
+            </a>
+            <a href="javascript:;">金程网校</a>
+            <a href="javascript:;">金程内训</a>
+            <a href="javascript:;">金程考研</a>
+            <a id="school" href="javascript:">金程分校
+              <i></i>
+              <em></em>
+            </a>
+            <a href="javascript:;">金程动态</a>
+          </nav>
+        </h6>
+        <section>
+          <dl>
+            <dt>
+              <h5>虹口分校</h5>
+            </dt>
+            <dd>
+              <a href="javascript:;">CFA</a>
+              <a href="javascript:;">CPA</a>
+              <a href="javascript:;">RFP</a>
+              <a href="javascript:;">FRM</a>
+              <a href="javascript:;">ACCA</a>
+              <a href="javascript:;">考研</a>
+              <a href="javascript:;">AQF</a>
+              <a href="javascript:;">CMA</a>
+              <a href="javascript:;">EXCEL</a>
+              <a href="javascript:;">从业资格</a>
+              <a href="javascript:;">经济学考研</a>
+              <a href="javascript:;">企业内训</a>
+            </dd>
+          </dl>
+
+          <dl>
+            <dt>
+              <h5>徐汇分校</h5>
+            </dt>
+            <dd>
+              <a href="javascript:;">CFA</a>
+              <a href="javascript:;">CPA</a>
+              <a href="javascript:;">RFP</a>
+              <a href="javascript:;">FRM</a>
+              <a href="javascript:;">ACCA</a>
+              <a href="javascript:;">考研</a>
+              <a href="javascript:;">AQF</a>
+              <a href="javascript:;">CMA</a>
+              <a href="javascript:;">EXCEL</a>
+              <a href="javascript:;">从业资格</a>
+            </dd>
+          </dl>
+
+          <dl>
+            <dt>
+              <h5>浦东分校</h5>
+            </dt>
+            <dd>
+              <a href="javascript:;">CFA</a>
+              <a href="javascript:;">CPA</a>
+              <a href="javascript:;">RFP</a>
+              <a href="javascript:;">FRM</a>
+              <a href="javascript:;">ACCA</a>
+              <a href="javascript:;">考研</a>
+              <a href="javascript:;">AQF</a>
+            </dd>
+          </dl>
+
+          <dl>
+            <dt>
+              <h5>北京分校</h5>
+            </dt>
+            <dd>
+              <a href="javascript:;">CFA</a>
+              <a href="javascript:;">CPA</a>
+              <a href="javascript:;">RFP</a>
+              <a href="javascript:;">FRM</a>
+              <a href="javascript:;">ACCA</a>
+              <a href="javascript:;">考研</a>
+              <a href="javascript:;">AQF</a>
+              <a href="javascript:;">CMA</a>
+              <a href="javascript:;">EXCEL</a>
+              <a href="javascript:;">从业资格</a>
+              <a href="javascript:;">经济学考研</a>
+              <a href="javascript:;">企业内训</a>
+            </dd>
+          </dl>
+
+          <dl>
+            <dt>
+              <h5>南京分校</h5>
+            </dt>
+            <dd>
+              <a href="javascript:;">CFA</a>
+              <a href="javascript:;">CPA</a>
+              <a href="javascript:;">RFP</a>
+              <a href="javascript:;">FRM</a>
+              <a href="javascript:;">ACCA</a>
+              <a href="javascript:;">考研</a>
+              <a href="javascript:;">AQF</a>
+              <a href="javascript:;">CMA</a>
+              <a href="javascript:;">EXCEL</a>
+              <a href="javascript:;">从业资格</a>
+            </dd>
+          </dl>
+
+          <dl>
+            <dt>
+              <h5>深圳分校</h5>
+            </dt>
+            <dd>
+              <a href="javascript:;">CFA</a>
+              <a href="javascript:;">CPA</a>
+              <a href="javascript:;">RFP</a>
+              <a href="javascript:;">FRM</a>
+              <a href="javascript:;">ACCA</a>
+              <a href="javascript:;">考研</a>
+              <a href="javascript:;">AQF</a>
+            </dd>
+          </dl>
+        </section>
+      </article>
+    </div>
+  </div>
+  <!-- header end-->
+
+  <!-- AQF导航 start -->
+  <!-- proheader-->
+  <div class="mainheader">
+    <div class="container">
+      <div class="protitle">
+        <h2>
+          <img src="../../images/public/logo.png">
+        </h2>
+        <p style="position:relative;height:45px;">
+          <img src="../../images/public/AQF-text.png" alt="AQF" style="position:absolute;top:-7px;
+            left:0;height:60px">
+        </p>
+      </div>
+      <div class="prosearch">
+        <input type="text" placeholder="请输入关键字">
+        <input type="button" value="&#xe60b;" class="icon-gfsearch">
+      </div>
+      <div class="prophone">
+        <i class="icon-phone">&#xe90b;</i>400-700-9596</div>
+    </div>
+  </div>
+
+  <!-- AQFnav start -->
+  <div class="AQFnav">
+    <div class="container">
+      <ul>
+        <li class="current">
+          <a href="javascript:;">首页</a>
+        </li>
+        <li>
+          <a href="javascript:;">资讯中心</a>
+        </li>
+        <li class="expend">
+          <a href="javascript:;">课程中心</a>
+          <ul>
+            <li>
+              <a href="javascript:;">AQF</a>
+            </li>
+            <li>
+              <a href="javascript:;">AQF</a>
+            </li>
+            <li>
+              <a href="javascript:;">AQF</a>
+            </li>
+          </ul>
+        </li>
+        <li class="expend">
+          <a href="javascript:;">学习中心</a>
+        </li>
+        <li>
+          <a href="javascript:;">策略大赛</a>
+        </li>
+        <li>
+          <a href="javascript:;">关于AQF</a>
+        </li>
+        <li class="expend">
+          <a href="javascript:;">考试指南</a>
+        </li>
+        <li class="expend">
+          <a href="javascript:;">备考中心</a>
+        </li>
+        <li class="expend">
+          <a href="javascript:;">关于我们</a>
+        </li>
+      </ul>
+      <div class="date">
+        距离2018年1月AQF开始还有
+        <span>80</span>天
+      </div>
+    </div>
+  </div>
+  <!-- AQFnav end -->
+
+  <!-- banner start -->
+  <div class="banner">
+    <div class="carousel banner-carousel">
+      <ul class="carousel-wrap">
+        <li>
+          <img src="../..//images/index/banner.jpg">
+        </li>
+        <li>
+          <img src="../..//images/index/banner.jpg">
+        </li>
+        <li>
+          <img src="../..//images/index/banner.jpg">
+        </li>
+        <li>
+          <img src="../..//images/index/banner.jpg">
+        </li>
+        <li>
+          <img src="../..//images/index/banner.jpg">
+        </li>
+        <li>
+          <img src="../..//images/index/banner.jpg">
+        </li>
+      </ul>
+      <ol></ol>
+      <a href="javascript:;" class="env-prev">
+        <i class="icon-prev"></i>
+        <</a>
+          <a href="javascript:;" class="env-next">
+            <i class="icon-next"></i>></a>
+
+    </div>
+  </div>
+  <!-- banner end -->
+
+
+  <!-- introduction start -->
+  <div class="introduction">
+    <div class="container">
+      <div class="quicknav">
+        <div>
+          <img src="../../images/index/intro1.png" alt="AQF简介">
+          <div>
+            <p>AQF简介</p>
+            <p>一句话说明文案</p>
+          </div>
+        </div>
+        <div>
+          <img src="../../images/index/intro2.png" alt="考试大纲">
+          <div>
+            <p>考试大纲</p>
+            <p>一句话说明文案</p>
+          </div>
+        </div>
+        <div>
+          <img src="../../images/index/intro3.png" alt="考试流程">
+          <div>
+            <p>考试流程</p>
+            <p>一句话说明文案</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="infolist">
+        <p>
+          <span class="current">
+            <a href="javascript:;">最新资讯</a>
+          </span>
+          <span>
+            <a href="javascript:;">考试公告</a>
+          </span>
+          <a href="javascript:;">更多></a>
+        </p>
+
+        <div class="infolist-content">
+          <ul class="news current">
+            <li>
+              <a href="javascript:;"></a>
+              <img src="../../images/index/info1.jpg">
+              <div>
+                <h3>CFRM考试大纲免费领取！</h3>
+                <p>为了帮助CFRM考友顺利通过CFRM考试，金程CFRM老师... </p>
+              </div>
+            </li>
+            <li>
+              <img src="../../images/index/info2.jpg">
+              <div>
+                <h3>纠结考CFA还是CPA？金程 CFA+CPA双证合璧开班...</h3>
+                <p>为了帮助CFRM考友顺利通过CFRM考试，金程CFRM老师... </p>
+              </div>
+            </li>
+            <li>
+              <img src="../../images/index/info3.jpg">
+              <div>
+                <h3>你还不知道？CFA一级只看 百题就能过！</h3>
+                <p>为了帮助CFRM考友顺利通过CFRM考试，金程CFRM老师... </p>
+              </div>
+            </li>
+            <li>
+              <img src="../../images/index/info4.jpg">
+              <div>
+                <h3>贺~金程教育携手上海商学 院成功达成CFA项目合作</h3>
+                <p>为了帮助CFRM考友顺利通过CFRM考试，金程CFRM老师... </p>
+              </div>
+            </li>
+            <li>
+              <img src="../../images/index/info5.jpg">
+              <div>
+                <h3>深圳CFA现场公开课程这周 末要不要约一下！</h3>
+                <p>为了帮助CFRM考友顺利通过CFRM考试，金程CFRM老师... </p>
+              </div>
+            </li>
+          </ul>
+          <ul class=announcement "">
+            <li>
+              <a href="javascript:;"></a>
+              <img src="../../images/index/info1.jpg">
+              <div>
+                <h3>假装我是公告1</h3>
+                <p>为了帮助CFRM考友顺利通过CFRM考试，金程CFRM老师... </p>
+              </div>
+            </li>
+            <li>
+              <img src="../../images/index/info2.jpg">
+              <div>
+                <h3>假装我是公告2</h3>
+                <p>为了帮助CFRM考友顺利通过CFRM考试，金程CFRM老师... </p>
+              </div>
+            </li>
+            <li>
+              <img src="../../images/index/info3.jpg">
+              <div>
+                <h3>假装我是公告3！</h3>
+                <p>为了帮助CFRM考友顺利通过CFRM考试，金程CFRM老师... </p>
+              </div>
+            </li>
+            <li>
+              <img src="../../images/index/info4.jpg">
+              <div>
+                <h3>公告已经累了，公告已经不想假装了，但是必须要测试多行省略</h3>
+                <p>为了帮助CFRM考友顺利通过CFRM考试，金程CFRM老师... </p>
+              </div>
+            </li>
+            <li>
+              <img src="../../images/index/info5.jpg">
+              <div>
+                <h3>你根本就没想到公告，你之想到你自己</h3>
+                <p>为了帮助CFRM考友顺利通过CFRM考试，金程CFRM老师... </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- introduction end -->
+
+  <!-- course-center start -->
+  <div class="course-center">
+    <h2>课程中心
+      <p>COURSE CENTER</p>
+    </h2>
+    <div class="container">
+      <ul>
+        <li>
+          <div class="coursepic">
+            <img src="../../images/index/course1.jpg">
+          </div>
+          <div class="content">
+            <h3>
+              <a href="javascript:;">量化投资入门特惠班</a>
+            </h3>
+            <p>量化投资入门课程，课程内容包括Python编程环境搭建、Python编程基础部分内容（基本介绍、数据结构等）、经典策略中的双均线SMA模型、配对交易模型（pair trading）。本课程旨在为</p>
+            <div class="price">
+              <span>￥
+                <b>899</b>
+              </span>
+              <span>原价:
+                <em>￥1688</em>
+              </span>
+            </div>
+            <dl>
+              <dt>特色服务：</dt>
+              <dd>个性化学习规划</dd>
+              <dd>殿堂级专业师资</dd>
+              <dd>多维化教学产品</dd>
+              <dd>管家式教学服务</dd>
+            </dl>
+            <div class="btns">
+              <a href="javascript:;">了解详情</a>
+              <a href="javascript:;">在线咨询</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="coursepic">
+            <img src="../../images/index/course1.jpg">
+          </div>
+          <div class="content">
+            <h3>
+              <a href="javascript:;">量化金融分析师AQF实训项目</a>
+            </h3>
+            <p>量化投资入门课程，课程内容包括Python编程环境搭建、Python编程基础部分内容（基本介绍、数据结构等）、经典策略中的双均线SMA模型、配对交易模型（pair trading）。本课程旨在为</p>
+            <div class="price">
+              <span>￥
+                <b>7880</b>
+              </span>
+              <span>原价:
+                <em>￥8400</em>
+              </span>
+            </div>
+            <dl>
+              <dt>特色服务：</dt>
+              <dd>个性化学习规划</dd>
+              <dd>殿堂级专业师资</dd>
+              <dd>多维化教学产品</dd>
+              <dd>管家式教学服务</dd>
+            </dl>
+            <div class="btns">
+              <a href="javascript:;">了解详情</a>
+              <a href="javascript:;">在线咨询</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="coursepic">
+            <img src="../../images/index/course1.jpg">
+          </div>
+          <div class="content">
+            <h3>
+              <a href="javascript:;">量化交易策略长久更新班（AQF实训项目+策略大讲堂 策略集锦）</a>
+            </h3>
+            <p>量化投资入门课程，课程内容包括Python编程环境搭建、Python编程基础部分内容（基本介绍、数据结构等）、经典策略中的双均线SMA模型、配对交易模型（pair trading）。本课程旨在为</p>
+            <div class="price">
+              <span>￥
+                <b>7880</b>
+              </span>
+              <span>原价:
+                <em>￥8400</em>
+              </span>
+            </div>
+            <dl>
+              <dt>特色服务：</dt>
+              <dd>个性化学习规划</dd>
+              <dd>殿堂级专业师资</dd>
+              <dd>多维化教学产品</dd>
+              <dd>管家式教学服务</dd>
+            </dl>
+            <div class="btns">
+              <a href="javascript:;">了解详情</a>
+              <a href="javascript:;">在线咨询</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <a href="javascript:;" class="seemore">查看更多课程></a>
+    </div>
+  </div>
+  <!-- course-center end -->
+
+  <!-- learning center start -->
+  <div class="lncenter">
+    <h2>学习中心 & 备考中心
+      <p>LEARING CENTER & TEST CENTER</p>
+    </h2>
+    <div class="container">
+      <ul>
+        <li>
+          <img src="../../images/index/learn1.png">
+          <h3>在线课程</h3>
+          <p>随时随地观看——
+            <br>阶梯型进阶课程体系设计
+            <br>理论与实践相衔接的优质课程</p>
+        </li>
+        <li>
+          <img src="../../images/index/learn2.png">
+          <h3>精选文章</h3>
+          <p>随时随地浏览——
+            <br>干货推送，原创精选</p>
+        </li>
+        <li>
+          <img src="../../images/index/learn3.png">
+          <h3>学习资料</h3>
+          <p>随时随地下载——
+            <br>源代码、电子书……干货尽在此</p>
+        </li>
+        <li>
+          <img src="../../images/index/learn4.png">
+          <h3>题库中心</h3>
+          <p>随时随地刷题——
+            <br>市面最全模拟题、历史真题</p>
+          <p></p>
+        </li>
+        <li>
+          <img src="../../images/index/learn5.png">
+          <h3>备考中心</h3>
+          <p>随时随地跟进——
+            <br>考试相关资讯，考前考后不再担忧</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- learning center end -->
+
+  <!-- dev-center start -->
+  <div class="dev-center">
+    <h2>研发中心
+      <p>RESEARCH AND DEVELOPMENT CENTER</p>
+    </h2>
+    <div class="container">
+      <ul>
+        <li>
+          <div class="teacherpic">
+            <img src="../../images/index/teacher1.png" alt="梁震宇">
+          </div>
+          <h3>梁震宇</h3>
+          <p>个人背景：经济学硕士、航海专业学士、CFA（注册金融分析师）、FRM（金融风险管理师）、CATTI（中国人事部认证口译）持证人、锦翼FIRE背词法创始人、中国翻译家协会成员。学术功底扎实，具有清晰的表达能力、强烈的个人魅力和远见</p>
+          <span>...</span>
+          <a href="javascript:;" class="expend-text">展开全部</a>
+        </li>
+        <li>
+          <div class="teacherpic">
+            <img src="../../images/index/teacher2.png" alt="纪慧诚">
+          </div>
+          <h3>纪慧诚</h3>
+          <p>个人背景：金程教育金融研究院资深培训师、金程教育Excel金融建模、量化投资(AQF)课程开发负责人。金融行业从业经验丰富，曾先后就职于中国建设银行、中信证券等知名金融机构。对企业IPO、投资理财、量化投资等领域有着深入的研究和</p>
+          <span>...</span>
+          <a href="javascript:;" class="expend-text">展开全部</a>
+        </li>
+        <li>
+          <div class="teacherpic">
+            <img src="../../images/index/teacher3.png" alt="屈老师">
+          </div>
+          <h3>屈老师</h3>
+          <p>个人背景：金程教育金融研究院资深培训师、金程教育Excel金融建模、量化投资(AQF)课程开发负责人。金融行业从业经验丰富，曾先后就职于中国建设银行、中信证券等知名金融机构。对企业IPO、投资理财、量化投资等领域有着深入的研究和</p>
+          <span>...</span>
+          <a href="javascript:;" class="expend-text">展开全部</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- dev-center end -->
+
+  <!-- BLOGROLL start -->
+  <div class="blogroll">
+    <div class="container">
+        <h2>友情链接
+            <p>BLOGROLL</p>
+        </h2>
+      <p>      
+        <a href="javascript:;">大兴安岭考试信息</a> \
+        <a href="javascript:;">清华大学在职研究生 </a> \
+        <a href="javascript:;">江苏考研网</a> \
+        <a href="javascript:;">湖北成考网</a> \
+        <a href="javascript:;">金融硕士考研培训</a> \
+        <a href="javascript:;">coursework代写</a> \ 
+        <a href="javascript:;">烟台达内培训</a> \ 
+        <a href="javascript:;">上海it培训</a> \ 
+        <a href="javascript:;">沈阳会计培训</a> 
+        <a href="javascript:;">广州佰平会计 </a> \ 
+        <a href="javascript:;">在职教育学博士</a> \ 
+        <a href="javascript:;">注册风险管理师协会</a> \ 
+        <a href="javascript:;">南京ui培训</a> \ 
+        <a href="javascript:;">CFRM</a> \ 
+        <a href="javascript:;">中国市场学会金融服务工作委员会</a> \ 
+        <a href="javascript:;">上海招生考试网</a>\ 
+        <a href="javascript:;">河南教师资格证考试</a></p>
+    </div>
+  </div>
+  <!-- BLOGROLL end -->
+
+  <!-- footer start-->
+  <footer>
+    <div class="profooter">
+      <dl>
+        <dt>
+          <h3>客服热线</h3>
+          <p>
+            <strong>400-700-9596</strong>(每日9：00-21：00 免长途费)</p>
+        </dt>
+        <dd>
+          <i class="icon-gfwb">&#xe604;</i>
+          <a>
+            <h3>官方微博</h3>
+            <p>微博号：金程教育官方微博</p>
+          </a>
+        </dd>
+      </dl>
+      <article>
+        <a>
+          <img src="../../images/public/aqfewm.jpg" alt="aqfewm-code" />
+          <h3>公众号</h3>
+          <p>微信扫一扫,掌握最新动态
+            <br/>或搜索：Qinstitute</p>
+        </a>
+      </article>
+    </div>
+    <div class="copyright">
+      <p>© 2000 - 2018 上海金程国际金融专修公司. 沪ICP备08016784号 本公司通过ISO9001:2008国际质量管理体系认证</p>
+    </div>
+  </footer>
+  <!-- footer end-->
+  <!-- Go Top -->
+  <div class="gotop">
+    <a href="#">
+      <strong>∧</strong>TOP</a>
+  </div>
+
+
+  <!-- 登录 start-->
+  <div class="toplogin" id="toplogin">
+    <div class="regbox">
+      <section>
+        <a href="javascript:;" class="closebox" id="close1">
+          <i class="icon-cross">&#xea0f;</i>
+        </a>
+        <h2>登录金程教育</h2>
+        <ul>
+          <li>
+            <input type="text" name="Field_UserName" id="Field_UserName" maxlength="20" placeholder="手机号\用户名" onBlur="__changeRealNameL('Field_UserName');">
+            <p class="noticeLR" id="noticeLR_Field_UserName"></p>
+          </li>
+          <li id="password_input">
+            <input type="password" id="password1" name="Field_PassWordPC" placeholder="密码" onBlur="checkPwd1('password1');">
+            <p class="noticeLR" id="noticeLR_password1"></p>
+          </li>
+          <li>
+            <span>
+              <a href="">忘记密码？</a>
+            </span>
+            <input type="checkbox" value="两周内免登录">两周内免登录</li>
+          <li>
+            <input type="button" value="登录">
+          </li>
+        </ul>
+        <p>
+          <span>
+            <a onClick="LtR();" href="javascript:;">注册</a>金程帐号</span>合作帐号直接登录
+          <i class="icon-gfqq">
+            <a href="">&#xe605;</a>
+          </i>
+          <i class="icon-gfwb">
+            <a href="">&#xe604;</a>
+          </i>
+        </p>
+      </section>
+    </div>
+  </div>
+  <!-- 登录 end-->
+
+  <!-- 注册 start-->
+  <div class="topregister" id="topregister">
+    <div class="regbox">
+      <section>
+        <a href="javascript:;" class="closebox2">
+          <i class="icon-cross">&#xea0f;</i>
+        </a>
+        <h2>注册金程教育</h2>
+        <ul>
+          <li id="realname_input">
+            <input id="realnameM" maxlength="20" name="realname" tabindex="4" placeholder="填写真实姓名" onBlur="__changeRealName('realnameM');"
+              type="text">
+            <p class="noticeLR" id="noticeLR_realnameM"></p>
+          </li>
+          <li id="tel_input">
+            <input name="tel" id="tel" maxlength="11" placeholder="请填写手机号码" onBlur="__changeUserName('tel');" type="text">
+            <p class="noticeLR" id="noticeLR_tel"></p>
+          </li>
+          <li class="reghalf" id="code_input">
+            <input autocomplete="off" placeholder="输入收到的验证码" name="verifyCode" id="verifyCodeP" onFocus="document.getElementById('noticeLR_verifyCodeP').innerHTML = '';"
+              type="text">
+            <input id="btnP" value="获取短信验证码" type="button">
+            <p class="noticeLR" id="noticeLR_verifyCodeP"></p>
+          </li>
+          <li id="password1_input">
+            <input name="passwd" id="passwd" placeholder="密码由8～15位数字和字母组成" value="" maxlength="20" onBlur="checkPwd1('passwd');" type="password">
+            <p class="noticeLR" id="noticeLR_passwd"></p>
+          </li>
+          <li>
+            <input type="checkbox" value="同意金程的《用户协议》">同意金程的《用户协议》</li>
+          <li>
+            <input type="button" value="登录">
+          </li>
+        </ul>
+        <p>
+          <span>已有账号马上
+            <a onclick="RtL();" href="javascript:;">登录</a>
+          </span>合作帐号直接登录
+          <i class="icon-gfqq">
+            <a href="">&#xe605;</a>
+          </i>
+          <i class="icon-gfwb">
+            <a href="">&#xe604;</a>
+          </i>
+        </p>
+      </section>
+    </div>
+  </div>
+
+  <!-- 注册 end-->
+
+
 </body>
+
 </html>

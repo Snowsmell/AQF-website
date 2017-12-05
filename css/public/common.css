@@ -146,6 +146,9 @@ button {
   background-color: #f9fafc;
   border-bottom: 1px solid #ddd;
 }
+.mainheader .container {
+  min-height: 46px;
+}
 .mainheader .prophone {
   color: #333;
 }
