@@ -1,0 +1,180 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.banner {
+  background: url('../../images/aboutAQF/banner.jpg') no-repeat center center;
+  background-size: cover;
+  padding: 5% 10px;
+  text-align: center;
+}
+.banner img {
+  max-width: 100%;
+}
+main {
+  padding: 7% 0;
+  background-color: #f5f6f9;
+}
+main article section {
+  margin-bottom: 8%;
+  *zoom: 1;
+}
+main article section:after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+main article section div {
+  float: left;
+  width: 50%;
+  box-sizing: border-box;
+  padding-left: 20px;
+}
+main article section div img {
+  width: 100%;
+  max-width: 540px;
+  max-height: 300px;
+  position: relative;
+  z-index: 666;
+}
+main article section div h2 {
+  font-size: 24px;
+  color: #0078c3;
+  margin: 60px 0 40px;
+}
+main article section div p {
+  font-size: 16px;
+  color: #666;
+  line-height: 36px;
+}
+main article section div:first-of-type {
+  position: relative;
+}
+main article section div:first-of-type:before {
+  content: '';
+  position: absolute;
+  width: 90%;
+  height: 100%;
+  top: 20px;
+  left: 0px;
+  border: 1px solid #0078c3;
+  z-index: 555;
+}
+main article section div.content {
+  text-align: left;
+}
+main article section:nth-of-type(2) div {
+  float: right;
+}
+main article section:nth-of-type(2) div:first-of-type:before {
+  left: 40px;
+}
+main article section:nth-of-type(2) div.content {
+  text-align: right;
+  padding-right: 3.5%;
+  padding-left: 0;
+}
+main article section:last-of-type {
+  margin-bottom: 0;
+}
+.wraplink {
+  background-color: #fff;
+  padding: 7% 0;
+}
+.wraplink .container {
+  font-size: 0;
+}
+.wraplink .container > div {
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
+}
+.wraplink .container > div img {
+  width: 120px;
+  float: left;
+}
+.wraplink .container > div div {
+  margin-left: 150px;
+  box-sizing: border-box;
+  padding-right: 8%;
+}
+.wraplink .container > div div h3 {
+  font-size: 28px;
+  color: #333;
+}
+.wraplink .container > div div p {
+  color: #666;
+  font-size: 16px;
+  line-height: 30px;
+  margin: 20px 0;
+}
+.wraplink .container > div div a {
+  color: #0078c3;
+  border: 1px solid #0078c3;
+  font-size: 18px;
+  padding: 8px 35px;
+}
+.wraplink .container > div div a:hover {
+  color: #fff;
+  background-color: #0078c3;
+}
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 10px;
+  }
+  main article section div h2 {
+    margin: 0;
+  }
+  main article section div p {
+    font-size: 12px;
+  }
+}
+@media (max-width: 768px) {
+  .wraplink .container > div img {
+    width: 80px;
+  }
+  .wraplink .container > div div {
+    margin-left: 100px;
+    padding-right: 5%;
+  }
+  .wraplink .container > div div h3 {
+    font-size: 20px;
+  }
+  .wraplink .container > div div p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .wraplink .container > div div a {
+    padding: 8px 25px;
+  }
+}
+@media (max-width: 640px) {
+  main article {
+    padding: 0 10px;
+  }
+  main article section div {
+    width: 100%;
+    padding-left: 0;
+  }
+  main article section div p {
+    line-height: 24px;
+    font-size: 14px;
+  }
+  main article section div:first-of-type:before {
+    display: none;
+  }
+  main article section:nth-of-type(2) div {
+    float: left;
+  }
+  main article section:nth-of-type(2) div.content {
+    text-align: left;
+    padding-right: 0;
+  }
+  .wraplink .container > div {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .wraplink .container > div:last-of-type {
+    margin-bottom: 0;
+  }
+}

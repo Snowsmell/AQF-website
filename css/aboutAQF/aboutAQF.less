@@ -1,0 +1,221 @@
+.cf() {
+    // IE7-
+    *zoom: 1; // others
+    &:after {
+        content: " ";
+        clear: both;
+        display: table;
+    }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto
+}
+
+.banner {
+    background: url('../../images/aboutAQF/banner.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 5% 10px;
+    text-align: center;
+    img {
+        max-width: 100%
+    }
+}
+
+main {
+    padding: 7% 0;
+    background-color: #f5f6f9;
+    article {
+        section {
+            margin-bottom: 8%;            
+            .cf();
+            div {
+                float: left;
+                width: 50%;
+                box-sizing: border-box;
+                padding-left:20px;
+                img {
+                    width: 100%;
+                    max-width: 540px;
+                    max-height: 300px;
+                    position: relative;
+                    z-index: 666;
+                }
+                h2{
+                  font-size: 24px;
+                  color:#0078c3;
+                  margin: 60px 0 40px;
+                }
+                p{
+                  font-size: 16px;
+                  color:#666;
+                  line-height: 36px;
+                }
+                &:first-of-type {
+                  position: relative;                  
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        width: 90%;
+                        height: 100%;
+                        top: 20px;
+                        left: 0px;
+                        border: 1px solid #0078c3;
+                        z-index: 555;
+                    }
+                }
+            }
+            div.content{
+              text-align: left;              
+            }
+            &:nth-of-type(2) {
+                div {
+                    float: right;
+                    &:first-of-type{
+                      &:before{
+                        left: 40px
+                      }
+                    }
+                }
+                div.content{
+                  text-align: right;
+                  padding-right: 3.5%;
+                  padding-left: 0;
+                }
+            }
+            &:last-of-type {
+                margin-bottom: 0
+            }
+        }
+    }
+}
+
+.wraplink{
+  background-color: #fff;
+  padding: 7% 0;
+  .container{
+    font-size: 0;
+    >div{
+      display: inline-block;
+      width: 50%;
+      vertical-align: top;
+      img{
+        width: 120px;
+        float: left;
+      }
+      div{
+        margin-left: 150px;
+        box-sizing: border-box;
+        padding-right: 8%;
+        h3{
+          font-size: 28px;
+          color: #333;
+        }
+        p{
+          color:#666;
+          font-size: 16px;
+          line-height: 30px;
+          margin: 20px 0;
+        }
+        a{
+          color:#0078c3;
+          border: 1px solid #0078c3;
+          font-size: 18px;
+          padding: 8px 35px;
+          &:hover{
+            color:#fff;
+            background-color: #0078c3;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media(max-width:1200px){
+  .container{
+    padding: 0 10px;
+  }
+  main{
+    article{      
+      section{
+        div{
+          h2{
+            margin: 0
+          }
+          p{
+            font-size: 12px
+          }
+        }
+      }
+    }
+  }
+}
+@media(max-width:768px){
+  .wraplink{
+    .container{
+      >div{
+        img{
+          width: 80px;          
+        }
+        div{
+          margin-left: 100px;
+          padding-right: 5%;
+          h3{
+            font-size: 20px;
+          }
+          p{
+            font-size: 14px;
+            line-height: 24px;
+          }
+          a{
+            padding: 8px 25px;
+          }
+        }
+      }
+    }
+  }
+}
+@media(max-width:640px){
+  main{
+    article{   
+      padding: 0 10px;    
+      section{
+        div{
+          width: 100%;
+          padding-left: 0;
+          p{
+            line-height: 24px;
+            font-size: 14px;
+          }
+          &:first-of-type {              
+              &:before {
+                display: none;
+              }
+          }          
+        }
+        &:nth-of-type(2) {
+          div {
+              float: left;              
+          }
+          div.content{
+            text-align: left;
+            padding-right: 0;            
+          }
+      }
+      }
+    }
+  }
+  .wraplink{
+    .container{
+      >div{
+        width: 100%;
+        margin-bottom: 20px;
+        &:last-of-type{
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
