@@ -1,16 +1,16 @@
 $(function () {
-  //环境展示轮播图
-  function banner(container) {
+  //banner展示轮播图
+  function banner(container,setTime) {
     //获取元素
     var carousel = document.querySelector(container);
-    var carouselWrap = carousel.querySelector('.carousel-wrap');
+    var carouselWrap = carousel.querySelector('ul');
     var lis = carouselWrap.querySelectorAll('li');
-    var ol = document.querySelector('ol');
+    var ol = carousel.querySelector('ol');
     var timer = null;
     var timer2 = null;
-    var imgWidth = lis[0].offsetWidth;
+    var imgWidth = $(window).width();
     var imgHeight = lis[0].offsetHeight;
-    console.log(imgWidth);
+    console.log(lis[0],imgWidth);
     function setHeight() {
       //设置盒子高度
       //循环创建小圆点，动态加入
@@ -44,7 +44,7 @@ $(function () {
 
 
     //自动轮播
-    timer = setInterval(showNext, 7000);
+    timer = setInterval(showNext, setTime);
 
     //移动端滑动事件
     var startX = 0;
@@ -62,9 +62,9 @@ $(function () {
     });
     carouselWrap.addEventListener('touchend', function (e) {
       // console.log('经过的时间');
-      console.log(Date.now() - startTime);
+      // console.log(Date.now() - startTime);
       // console.log('移动的距离');
-      console.log(moveX);
+      // console.log(moveX);
       if (Math.abs(moveX) > imgWidth / 3 || (Math.abs(moveX) > 50 && (Date.now() - startTime) < 100)) {
         if (moveX > 0) {
           showPrev()
@@ -75,19 +75,19 @@ $(function () {
         setTransition(true, true, true);
         setPosition(0)
       }
-      timer = setInterval(showNext, 7000);
+      timer = setInterval(showNext, setTime);
     });
 
     //pc端点击事件
     document.querySelector('.env-next').addEventListener('click', function () {
       clearInterval(timer)
       showNext()
-      timer = setInterval(showNext, 7000);
+      timer = setInterval(showNext, setTime);
     })
     document.querySelector('.env-prev').addEventListener('click', function () {
       clearInterval(timer)
       showPrev()
-      timer = setInterval(showNext, 7000);
+      timer = setInterval(showNext, setTime);
     })
     //右侧下一张
     function showNext() {
@@ -147,14 +147,30 @@ $(function () {
       olLis[center].classList.add('active')
     }
   }
-  banner('.banner-carousel')
-
-
+  banner('.banner-carousel',7000)  
   //关于切换
   $('.infolist p span').on('click',function(){
     $(this).addClass('current').siblings('span').removeClass('current')
     $('.infolist-content ul').eq($(this).index()).addClass('current')
                               .siblings('ul').removeClass('current')
   })
+
+
+  //关于研发中心老师的介绍展开
+  $('.dev-center .expend-text').on('click',function(){
+    $(this).siblings('span').toggle();
+    $(this).siblings('p').toggleClass('expend')
+    if($(this).text()=='展开全部'){
+      $(this).text('收起')
+    }else{
+      $(this).text('展开全部')
+    }
+  })
+
+  //研发中心移动端
+  if($(window).width()<=640){
+    $('.dev-center').removeClass('pc').addClass('mobile')
+    banner('.dev-center.mobile .container',10000)
+  }
 
 })

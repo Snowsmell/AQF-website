@@ -264,6 +264,7 @@ h2 p {
   float: left;
   width: 480px;
   height: 320px;
+  overflow: hidden;
 }
 .course-center ul li .coursepic img {
   max-width: 100%;
@@ -290,7 +291,7 @@ h2 p {
   color: #666;
   font-size: 14px;
   line-height: 28px;
-  margin: 10px 0  25px;
+  margin: 10px 0 25px;
   overflow: hidden;
   display: -webkit-box;
   word-break: break-all;
@@ -317,24 +318,32 @@ h2 p {
   text-decoration: line-through;
 }
 .course-center ul li .content dl {
-  padding: 20px 0;
+  padding: 20px 0 15px 70px;
   border-top: 1px dashed #ddd;
   border-bottom: 1px dashed #ddd;
   overflow: hidden;
+  position: relative;
 }
 .course-center ul li .content dl dd,
 .course-center ul li .content dl dt {
-  float: left;
   box-sizing: border-box;
   height: 32px;
   line-height: 32px;
 }
+.course-center ul li .content dl dt {
+  position: absolute;
+  width: 5em;
+  top: 20px;
+  left: 0;
+}
 .course-center ul li .content dl dd {
+  float: left;
   position: relative;
   background-color: #f3f6f7;
   padding: 0 10px;
   border: 1px solid #cdced1;
   margin-left: 20px;
+  margin-bottom: 5px;
 }
 .course-center ul li .content dl dd:before {
   content: '';
@@ -376,7 +385,8 @@ h2 p {
 }
 .course-center a.seemore {
   display: block;
-  width: 300px;
+  width: 60%;
+  max-width: 300px;
   height: 50px;
   line-height: 50px;
   text-align: center;
@@ -437,18 +447,7 @@ h2 p {
 .dev-center h2 p {
   color: rgba(255, 255, 255, 0.8);
 }
-.dev-center ul {
-  *zoom: 1;
-  margin-top: 40px;
-}
-.dev-center ul:after {
-  content: " ";
-  clear: both;
-  display: table;
-}
 .dev-center ul li {
-  float: left;
-  width: 33.3%;
   text-align: center;
   color: #fff;
 }
@@ -462,7 +461,8 @@ h2 p {
 }
 .dev-center ul li .teacherpic img {
   position: absolute;
-  max-width: 100%;
+  width: 96%;
+  max-width: 262px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -473,20 +473,317 @@ h2 p {
 }
 .dev-center ul li p {
   max-width: 315px;
+  width: 90%;
   margin: 0 auto;
   line-height: 26px;
   opacity: .8;
+  overflow: hidden;
+  display: -webkit-box;
+  word-break: break-all;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+}
+.dev-center ul li p.expend {
+  overflow: hidden;
+  display: -webkit-box;
+  word-break: break-all;
+  -webkit-line-clamp: 20;
+  -webkit-box-orient: vertical;
 }
 .dev-center ul li a {
   display: block;
   color: #22a5f1;
   text-decoration: underline;
 }
+.dev-center ol {
+  width: 100%;
+  height: 8px;
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+  text-align: center;
+  font-size: 0;
+}
+.dev-center ol > li {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+  background-color: #7a8187;
+  margin-right: 10px;
+}
+.dev-center ol > li.active {
+  background-color: #fff;
+}
+.dev-center.pc ul {
+  *zoom: 1;
+  margin-top: 40px;
+}
+.dev-center.pc ul:after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+.dev-center.pc ul li {
+  float: left;
+  width: 33.3%;
+}
+.dev-center.mobile {
+  padding: 40px 0;
+}
+.dev-center.mobile .container {
+  width: 100%;
+}
+.dev-center.mobile .container ul {
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+.dev-center.mobile .container ul li {
+  width: 100%;
+  position: absolute;
+  min-height: 515px;
+  left: 0;
+  top: 0;
+  transform: translateX(100%);
+}
+.dev-center.mobile .container ul li .teacherpic {
+  margin-top: 25px;
+  width: 190px;
+  height: 190px;
+}
+.dev-center.mobile .container ul li h3 {
+  margin: 10px 0;
+}
+.dev-center.mobile .container ul li p {
+  max-width: 90%;
+  line-height: 24px;
+  text-align: justify;
+  margin: 0 auto;
+}
 .blogroll {
   padding: 60px 0;
+}
+.blogroll p {
   line-height: 40px;
 }
 .blogroll p a {
   font-size: 16px;
   padding: 0 8px;
+}
+@media (max-width: 1200px) {
+  .course-center ul li .content h3 {
+    font-size: 24px;
+    line-height: 28px;
+    height: 56px;
+  }
+  .course-center ul li .content p {
+    margin: 10px 0;
+  }
+  .course-center ul li .content dl {
+    padding: 15px 0 10px 70px;
+  }
+  .lncenter ul {
+    padding: 0 10px;
+  }
+  .dev-center.pc ul {
+    padding: 0 10px;
+  }
+  .blogroll p {
+    padding: 0 10px;
+  }
+}
+@media (max-width: 960px) {
+  .course-center ul li .coursepic {
+    width: 300px;
+    height: 200px;
+  }
+  .course-center ul li .content {
+    margin-left: 330px;
+  }
+  .course-center ul li .content h3 {
+    font-size: 20px;
+    line-height: 24px;
+    height: 48px;
+  }
+  .course-center ul li .content p {
+    margin: 10px 0;
+    line-height: 20px;
+  }
+  .course-center ul li .content dl {
+    display: none;
+  }
+  .course-center ul li .content .btns a {
+    width: 120px;
+    font-size: 14px;
+  }
+  .lncenter ul li p {
+    font-size: 12px;
+  }
+  .dev-center.pc ul li .teacherpic {
+    width: 180px;
+    height: 180px;
+  }
+  .dev-center.pc ul li h3 {
+    margin: 15px 0;
+  }
+}
+@media (max-width: 640px) {
+  .course-center {
+    padding: 40px 0 0px;
+  }
+  .course-center ul li {
+    margin-top: 20px;
+    padding: 0 20px;
+    border: none;
+  }
+  .course-center ul li .coursepic {
+    width: 240px;
+    height: 160px;
+  }
+  .course-center ul li .content {
+    margin-left: 260px;
+  }
+  .course-center ul li .content h3 {
+    padding-right: 0;
+  }
+  .course-center ul li .content p {
+    overflow: hidden;
+    display: -webkit-box;
+    word-break: break-all;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    padding-right: 0;
+  }
+  .course-center ul li .content .price span {
+    width: 6em;
+  }
+  .course-center ul li .content .price span:first-of-type b {
+    font-size: 20px;
+    font-weight: 400;
+    text-shadow: 0.2px 0.2px #ff3701;
+  }
+  .course-center ul li .content .btns {
+    display: none;
+  }
+  .course-center a.seemore {
+    height: 40px;
+    line-height: 40px;
+    margin: 20px auto;
+  }
+  .lncenter {
+    padding: 30px 0;
+  }
+  .lncenter ul li {
+    padding-top: 20px;
+    width: 31.3%;
+    margin: 0 3.05% 10px 0;
+    height: 230px;
+  }
+  .lncenter ul li h3 {
+    margin: 10px 0;
+  }
+  .lncenter ul li p {
+    padding: 0 5px;
+  }
+  .lncenter ul li:nth-of-type(3) {
+    margin-right: 0;
+  }
+  .dev-center.pc {
+    padding: 30px 0;
+  }
+  .blogroll {
+    padding: 30px 0;
+  }
+  .blogroll p {
+    line-height: 24px;
+  }
+  .blogroll p a {
+    font-size: 14px;
+  }
+}
+@media (max-width: 500px) {
+  .course-center ul li .coursepic {
+    width: 180px;
+    height: 120px;
+  }
+  .course-center ul li .content {
+    margin-left: 190px;
+  }
+  .course-center ul li .content h3 {
+    font-size: 16px;
+    line-height: 20px;
+    height: 40px;
+  }
+  .course-center ul li .content p {
+    overflow: hidden;
+    display: -webkit-box;
+    word-break: break-all;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    margin: 5px 0;
+  }
+}
+@media (max-width: 420px) {
+  .course-center ul li {
+    padding: 0 10px;
+  }
+  .course-center ul li .coursepic {
+    width: 150px;
+    height: 100px;
+  }
+  .course-center ul li .content {
+    margin-left: 160px;
+  }
+  .course-center ul li .content h3 {
+    font-size: 14px;
+    line-height: 18px;
+    height: 36px;
+    text-shadow: .1px .1px #333;
+  }
+  .course-center ul li .content p {
+    overflow: hidden;
+    display: -webkit-box;
+    word-break: break-all;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    font-size: 12px;
+    margin: 0;
+    color: #999;
+  }
+  .course-center ul li .content .price span {
+    width: auto;
+  }
+  .course-center ul li .content .price span:last-of-type {
+    font-size: 12px;
+  }
+  .lncenter ul li {
+    width: 48%;
+    margin: 0 4% 10px 0;
+  }
+  .lncenter ul li p {
+    padding: 0 5px;
+  }
+  .lncenter ul li:nth-of-type(3) {
+    margin-right: 4%;
+  }
+  .lncenter ul li:nth-of-type(2n) {
+    margin-right: 0;
+  }
+  .dev-center.mobile {
+    padding: 30px 0;
+  }
+  .dev-center.mobile .container ul li {
+    min-height: 480px;
+  }
+  .dev-center.mobile .container ul li .teacherpic {
+    margin-top: 20px;
+    width: 170px;
+    height: 170px;
+  }
+  .dev-center.mobile .container ul li p {
+    max-width: 90%;
+    line-height: 20px;
+    font-size: 12px;
+  }
 }
