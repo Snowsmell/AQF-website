@@ -1,0 +1,30 @@
+.cf() {
+  // IE7-
+  *zoom: 1; // others
+  &:after {
+      content: " ";
+      clear: both;
+      display: table;
+  }
+}
+.container {
+  max-width: 1200px;
+  position: relative;
+  margin: 0 auto
+}
+
+a.btn{
+  background-image: -moz-linear-gradient( 180deg, rgb(0,120,195) 0%, rgb(49,169,237) 100%);
+  background-image: -webkit-linear-gradient( 180deg, rgb(0,120,195) 0%, rgb(49,169,237) 100%);
+  background-image: -ms-linear-gradient( 180deg, rgb(0,120,195) 0%, rgb(49,169,237) 100%);
+
+}
+.banner {
+  background: url('../../images/examcenter/banner.jpg') no-repeat center center;
+  background-size: cover;
+  padding: 5% 10px;
+  text-align: center;
+  img {
+      max-width: 100%
+  }
+}

@@ -1,0 +1,172 @@
+.cf() {
+  // IE7-
+  *zoom: 1; // others
+  &:after {
+      content: " ";
+      clear: both;
+      display: table;
+  }
+}
+.container {
+  max-width: 1200px;
+  position: relative;
+  margin: 0 auto
+}
+.banner {
+  background: url('../../images/testguide/banner.jpg') no-repeat center center;
+  background-size: cover;
+  padding: 5% 10px;
+  text-align: center;
+  img {
+      max-width: 100%
+  }
+}
+
+main{
+  padding: 20px 0;
+  background-color:#f5f6f9;
+  ul{
+    font-size: 0;
+    li{
+      display: inline-block;
+      width: 50%;
+      vertical-align: top;
+      margin-top: 60px;
+      .imgbox{
+        width: 80px;
+        height: 80px;
+        text-align: center;
+        img{
+          max-width: 100%;
+        }
+        float: left;
+      }
+      div:nth-of-type(2){
+        margin-left: 100px;
+        box-sizing: border-box;
+        padding-right: 8%;
+        h2{
+          font-size: 18px;
+          color: #0186db;
+          margin-bottom: 20px;
+          font-weight: 600;
+        }
+        p{
+          color:#666;
+          font-size: 16px;
+          line-height: 32px;
+        }
+      }
+    }
+  }
+}
+
+.gradequery{
+  padding:60px 0;
+  h2{
+    text-align: center;
+    font-size: 30px;
+    color:#333;
+    margin-bottom: 40px;
+  }
+  .container{
+    background-color: #f5f6f9;
+    padding: 30px;    
+    overflow: hidden;
+    img{
+      float: left;
+      width: 31.5%;
+      max-width: 360px;
+    }
+    >div{
+      margin-left: 34%;
+      h3{
+        color:#0186db;
+        font-size: 24px;
+        margin-bottom: 2.8%;
+      }
+      p{
+        font-size: 16px;
+        color:#666;
+        span{
+          color:#0186db
+        }
+      }
+      a{
+        display: block;
+        margin-top: 7%;
+        width: 100px;
+        height: 30px;
+        border-radius: 5px;
+        text-align: center;
+        line-height: 30px;
+        font-size: 16px;
+        box-sizing: border-box;
+        border: 1px solid #0186db;
+        color:#0186db;
+        &:hover{
+          background-color: #0186db;
+          color:#fff;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width:1200px){
+  main{
+    padding: 20px 10px
+  }
+  .gradequery{
+    .container{
+      padding: 30px 10px; 
+    }
+  }
+}
+@media (max-width:640px){
+  main{
+    padding: 20px;
+    ul{
+      li{
+        width: 100%;
+        margin-top: 20px;
+        div:nth-of-type(2){
+          padding-right: 0;
+          h2{
+            font-size: 16px;
+            margin-bottom: 15px;
+          }
+          p{
+            font-size: 12px;
+            line-height: 24px;
+          }
+        }
+      }
+    }
+  }
+  .gradequery{
+    padding: 20px 0;
+    h2{
+      font-size: 24px;      
+      margin-bottom: 20px;
+    }
+    .container{    
+      text-align: center;  
+      img{
+        float: none;
+        width: 100%;
+        text-align: center;
+      }
+      >div{
+        margin-left: 0;        
+        max-width: 360px;
+        margin: 0 auto;
+        p{
+          font-size: 14px;
+          text-align: justify;
+        }
+        a{margin: 10px auto 0}
+      }
+    }
+  }
+}

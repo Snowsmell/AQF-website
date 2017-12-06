@@ -1,0 +1,158 @@
+.container {
+  max-width: 1200px;
+  position: relative;
+  margin: 0 auto;
+}
+.banner {
+  background: url('../../images/testguide/banner.jpg') no-repeat center center;
+  background-size: cover;
+  padding: 5% 10px;
+  text-align: center;
+}
+.banner img {
+  max-width: 100%;
+}
+main {
+  padding: 20px 0;
+  background-color: #f5f6f9;
+}
+main ul {
+  font-size: 0;
+}
+main ul li {
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
+  margin-top: 60px;
+}
+main ul li .imgbox {
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  float: left;
+}
+main ul li .imgbox img {
+  max-width: 100%;
+}
+main ul li div:nth-of-type(2) {
+  margin-left: 100px;
+  box-sizing: border-box;
+  padding-right: 8%;
+}
+main ul li div:nth-of-type(2) h2 {
+  font-size: 18px;
+  color: #0186db;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+main ul li div:nth-of-type(2) p {
+  color: #666;
+  font-size: 16px;
+  line-height: 32px;
+}
+.gradequery {
+  padding: 60px 0;
+}
+.gradequery h2 {
+  text-align: center;
+  font-size: 30px;
+  color: #333;
+  margin-bottom: 40px;
+}
+.gradequery .container {
+  background-color: #f5f6f9;
+  padding: 30px;
+  overflow: hidden;
+}
+.gradequery .container img {
+  float: left;
+  width: 31.5%;
+  max-width: 360px;
+}
+.gradequery .container > div {
+  margin-left: 34%;
+}
+.gradequery .container > div h3 {
+  color: #0186db;
+  font-size: 24px;
+  margin-bottom: 2.8%;
+}
+.gradequery .container > div p {
+  font-size: 16px;
+  color: #666;
+}
+.gradequery .container > div p span {
+  color: #0186db;
+}
+.gradequery .container > div a {
+  display: block;
+  margin-top: 7%;
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 16px;
+  box-sizing: border-box;
+  border: 1px solid #0186db;
+  color: #0186db;
+}
+.gradequery .container > div a:hover {
+  background-color: #0186db;
+  color: #fff;
+}
+@media (max-width: 1200px) {
+  main {
+    padding: 20px 10px;
+  }
+  .gradequery .container {
+    padding: 30px 10px;
+  }
+}
+@media (max-width: 640px) {
+  main {
+    padding: 20px;
+  }
+  main ul li {
+    width: 100%;
+    margin-top: 20px;
+  }
+  main ul li div:nth-of-type(2) {
+    padding-right: 0;
+  }
+  main ul li div:nth-of-type(2) h2 {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  main ul li div:nth-of-type(2) p {
+    font-size: 12px;
+    line-height: 24px;
+  }
+  .gradequery {
+    padding: 20px 0;
+  }
+  .gradequery h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .gradequery .container {
+    text-align: center;
+  }
+  .gradequery .container img {
+    float: none;
+    width: 100%;
+    text-align: center;
+  }
+  .gradequery .container > div {
+    margin-left: 0;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+  .gradequery .container > div p {
+    font-size: 14px;
+    text-align: justify;
+  }
+  .gradequery .container > div a {
+    margin: 10px auto 0;
+  }
+}

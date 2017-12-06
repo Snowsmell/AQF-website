@@ -1,0 +1,19 @@
+.container {
+  max-width: 1200px;
+  position: relative;
+  margin: 0 auto;
+}
+a.btn {
+  background-image: -moz-linear-gradient(180deg, #0078c3 0%, #31a9ed 100%);
+  background-image: -webkit-linear-gradient(180deg, #0078c3 0%, #31a9ed 100%);
+  background-image: -ms-linear-gradient(180deg, #0078c3 0%, #31a9ed 100%);
+}
+.banner {
+  background: url('../../images/examcenter/banner.jpg') no-repeat center center;
+  background-size: cover;
+  padding: 5% 10px;
+  text-align: center;
+}
+.banner img {
+  max-width: 100%;
+}
