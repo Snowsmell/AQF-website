@@ -2,11 +2,22 @@
   max-width: 1200px;
   position: relative;
   margin: 0 auto;
+  overflow: hidden;
 }
 a.btn {
+  display: block;
+  margin: 40px auto 60px;
+  width: 205px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 16px;
+  color: #fff;
   background-image: -moz-linear-gradient(180deg, #0078c3 0%, #31a9ed 100%);
   background-image: -webkit-linear-gradient(180deg, #0078c3 0%, #31a9ed 100%);
   background-image: -ms-linear-gradient(180deg, #0078c3 0%, #31a9ed 100%);
+}
+a.btn:hover {
+  box-shadow: 0px 10px 8px -5px rgba(49, 169, 238, 0.4);
 }
 .banner {
   background: url('../../images/examcenter/banner.jpg') no-repeat center center;
@@ -16,4 +27,66 @@ a.btn {
 }
 .banner img {
   max-width: 100%;
+}
+main article section {
+  padding-top: 80px;
+  background-color: #f5f6f9;
+  text-align: center;
+}
+main article section h2 {
+  font-size: 24px;
+  font-weight: 100;
+  color: #333;
+}
+main article section img {
+  width: 100%;
+  max-width: 1200px;
+  vertical-align: bottom;
+}
+main article section:nth-of-type(2n) {
+  background-color: #fff;
+  padding-bottom: 80px;
+}
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 10px;
+  }
+}
+@media (max-width: 768px) {
+  a.btn {
+    margin: 20px auto 30px;
+  }
+  main article section {
+    padding-top: 40px;
+  }
+  main article section h2 {
+    font-size: 20px;
+  }
+  main article section:nth-of-type(2n) {
+    padding-bottom: 40px;
+  }
+}
+@media (max-width: 480px) {
+  a.btn {
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+  }
+  main article section {
+    padding-top: 30px;
+  }
+  main article section h2 {
+    font-size: 16px;
+  }
+  main article section:nth-of-type(2n) {
+    padding-bottom: 30px;
+  }
+}
+@media (max-width: 360px) {
+  a.btn {
+    font-size: 12px;
+  }
+  main article section h2 {
+    font-size: 14px;
+  }
 }
