@@ -1,0 +1,99 @@
+.cf() {
+    // IE7-
+    *zoom: 1; // others
+    &:after {
+        content: " ";
+        clear: both;
+        display: table;
+    }
+}
+
+.container {
+    max-width: 1200px;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+body {
+    background-color: #f5f6f9;
+}
+
+// 面包屑
+.brandnav {
+    height: 50px;
+    line-height: 50px;
+    color: #999;
+    font-size: 14px;
+    a {
+        color: #333;
+        &:hover {
+            color: #0078c3;
+        }
+    }
+}
+
+main {
+    .leftnav li,
+    .content {
+        background-color: #fff;
+        box-sizing: border-box;
+    }
+    ul.leftnav {
+        width: 270px;
+        float: left;
+        li {
+            cursor: pointer;
+            color: #666;
+            font-size: 16px;
+            padding: 16px 20px;
+            border-left: 3px solid transparent;
+            margin-bottom: 1px;
+            position: relative;
+            span {
+                font-family: '宋体';
+                position: absolute;
+                right: 20px;
+                top: 16px;
+                font-weight: 600;
+            }
+            &:hover {
+                border-left-color: #0078c3;
+                color: #0078c3
+            }
+        }
+        li.current {
+            border-left-color: #0078c3;
+            color: #0078c3
+        }
+    }
+    .content {
+        margin-left: 300px;
+        padding: 20px 40px;
+        h2 {
+            font-size: 16px;
+            color: #333;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 40px;
+        }
+        article {
+            display: none;
+            >h3{
+              font-size: 20px;
+              color:#333;
+              margin-bottom: 30px;
+            }
+            p{
+              font-size: 14px;
+              line-height: 28px;
+              color:#666;
+              text-align: justify;
+              margin-bottom: 40px;
+            }
+        }
+        article.current {
+            display: block
+        }
+    }
+}

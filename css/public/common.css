@@ -184,6 +184,7 @@ button {
 }
 .AQFnav {
   background-color: #fff;
+  border-bottom: 1px solid #ddd;
 }
 .AQFnav ul.first {
   *zoom: 1;

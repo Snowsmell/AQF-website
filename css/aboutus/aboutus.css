@@ -1,0 +1,83 @@
+.container {
+  max-width: 1200px;
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+}
+body {
+  background-color: #f5f6f9;
+}
+.brandnav {
+  height: 50px;
+  line-height: 50px;
+  color: #999;
+  font-size: 14px;
+}
+.brandnav a {
+  color: #333;
+}
+.brandnav a:hover {
+  color: #0078c3;
+}
+main .leftnav li,
+main .content {
+  background-color: #fff;
+  box-sizing: border-box;
+}
+main ul.leftnav {
+  width: 270px;
+  float: left;
+}
+main ul.leftnav li {
+  cursor: pointer;
+  color: #666;
+  font-size: 16px;
+  padding: 16px 20px;
+  border-left: 3px solid transparent;
+  margin-bottom: 1px;
+  position: relative;
+}
+main ul.leftnav li span {
+  font-family: '宋体';
+  position: absolute;
+  right: 20px;
+  top: 16px;
+  font-weight: 600;
+}
+main ul.leftnav li:hover {
+  border-left-color: #0078c3;
+  color: #0078c3;
+}
+main ul.leftnav li.current {
+  border-left-color: #0078c3;
+  color: #0078c3;
+}
+main .content {
+  margin-left: 300px;
+  padding: 20px 40px;
+}
+main .content h2 {
+  font-size: 16px;
+  color: #333;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 40px;
+}
+main .content article {
+  display: none;
+}
+main .content article > h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 30px;
+}
+main .content article p {
+  font-size: 14px;
+  line-height: 28px;
+  color: #666;
+  text-align: justify;
+  margin-bottom: 40px;
+}
+main .content article.current {
+  display: block;
+}
