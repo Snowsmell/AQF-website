@@ -74,10 +74,10 @@ button {
 
 .mainheader {
     background-color: #f9fafc;
-		border-bottom: 1px solid #ddd;
-		.container{
-			min-height: 46px;
-		}
+    border-bottom: 1px solid #ddd;
+    .container {
+        min-height: 46px;
+    }
     .prophone {
         color: #333;
         i {
@@ -117,10 +117,10 @@ button {
 
 .AQFnav {
     background-color: #fff;
-    ul {
-				.cf();
-				.bsz();
-        li {
+    ul.first {
+        .cf();
+        .bsz();
+        >li {
             float: left;
             position: relative;
             height: 50px;
@@ -128,7 +128,7 @@ button {
             margin-right: 3%;
             .bsz();
             border-bottom: 2px solid transparent;
-            a {
+            >a {
                 display: block;
                 position: relative;
                 font-size: 14px;
@@ -154,24 +154,23 @@ button {
             &:hover {
                 border-bottom: 2px solid #0078c3;
                 >a {
-                    color: #0078c3;
-                    font-weight: 600;
+                    color: #0078c3;                    
                     &:after {
-                        border-top: 6px solid #0078c3
+                        // border-top: 6px solid #0078c3
                     }
                 }
             }
-				}
-				>li.current{
-					border-bottom: 2px solid #0078c3;
-					>a {
-							color: #0078c3;
-							font-weight: 600;
-							&:after {
-									border-top: 6px solid #0078c3
-							}
-					}					
-				}
+        }
+        >li.current {
+            border-bottom: 2px solid #0078c3;
+            >a {
+                color: #0078c3;
+                font-weight: 600;
+                &:after {
+                    border-top: 6px solid #0078c3
+                }
+            }
+        }
         >li.expend {
             >a:after {
                 display: block;
@@ -179,9 +178,9 @@ button {
             ul {
                 display: none;
                 background-color: #fff;
-								position: absolute;
-								z-index: 999;
-                width: 100%;
+                position: absolute;
+                z-index: 999;
+                width: 120%;
                 top: 50px;
                 left: 0;
                 .bsz();
@@ -190,13 +189,18 @@ button {
                     float: none;
                     border: none;
                     text-align: center;
+                    height: 30px;
+                    line-height: 30px;
+                    &:hover{
+                        background-color: #f5f6f7;
+                    }
                 }
-						}
-						&:hover{
-							ul{
-								display: block;
-							}
-						}
+            }
+            &:hover {
+                ul {
+                    display: block;
+                }
+            }
         }
     }
     .date {
@@ -213,26 +217,27 @@ button {
             color: #0078c3;
             font-size: 16px;
         }
-		}
+    }
+}
 
+@media(max-width:960px) {
+    .AQFnav {
+        ul.first {
+            padding: 0 10px;
+        }
+        .date {
+            display: none;
+        }
+    }
 }
-@media(max-width:960px){
-	.AQFnav{
-		ul{
-			padding: 0 10px;
-		}
-		.date{
-			display: none;
-		}
-	}
-}
-@media(max-width:680px){
-	.AQFnav{
-		ul{
-			padding: 0 10px;
-			>li{
-				margin-right: 4.5%;
-			}
-		}
-	}
+
+@media(max-width:680px) {
+    .AQFnav {
+        ul.first {
+            padding: 0 10px;
+            >li {
+                margin-right: 4.5%;
+            }
+        }
+    }
 }

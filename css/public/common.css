@@ -185,17 +185,17 @@ button {
 .AQFnav {
   background-color: #fff;
 }
-.AQFnav ul {
+.AQFnav ul.first {
   *zoom: 1;
   zoom: 1;
   box-sizing: border-box;
 }
-.AQFnav ul:after {
+.AQFnav ul.first:after {
   content: " ";
   clear: both;
   display: table;
 }
-.AQFnav ul li {
+.AQFnav ul.first > li {
   float: left;
   position: relative;
   height: 50px;
@@ -204,7 +204,7 @@ button {
   box-sizing: border-box;
   border-bottom: 2px solid transparent;
 }
-.AQFnav ul li a {
+.AQFnav ul.first > li > a {
   display: block;
   position: relative;
   font-size: 14px;
@@ -212,7 +212,7 @@ button {
   font-weight: 400;
   transition: all .5s;
 }
-.AQFnav ul li a:after {
+.AQFnav ul.first > li > a:after {
   display: none;
   content: '';
   position: absolute;
@@ -224,49 +224,50 @@ button {
   right: -9px;
   top: 22px;
 }
-.AQFnav ul li:last-of-type {
+.AQFnav ul.first > li:last-of-type {
   margin-right: 0;
 }
-.AQFnav ul li:hover {
+.AQFnav ul.first > li:hover {
   border-bottom: 2px solid #0078c3;
 }
-.AQFnav ul li:hover > a {
+.AQFnav ul.first > li:hover > a {
+  color: #0078c3;
+}
+.AQFnav ul.first > li.current {
+  border-bottom: 2px solid #0078c3;
+}
+.AQFnav ul.first > li.current > a {
   color: #0078c3;
   font-weight: 600;
 }
-.AQFnav ul li:hover > a:after {
+.AQFnav ul.first > li.current > a:after {
   border-top: 6px solid #0078c3;
 }
-.AQFnav ul > li.current {
-  border-bottom: 2px solid #0078c3;
-}
-.AQFnav ul > li.current > a {
-  color: #0078c3;
-  font-weight: 600;
-}
-.AQFnav ul > li.current > a:after {
-  border-top: 6px solid #0078c3;
-}
-.AQFnav ul > li.expend > a:after {
+.AQFnav ul.first > li.expend > a:after {
   display: block;
 }
-.AQFnav ul > li.expend ul {
+.AQFnav ul.first > li.expend ul {
   display: none;
   background-color: #fff;
   position: absolute;
   z-index: 999;
-  width: 100%;
+  width: 120%;
   top: 50px;
   left: 0;
   box-sizing: border-box;
   border: 1px solid #ddd;
 }
-.AQFnav ul > li.expend ul li {
+.AQFnav ul.first > li.expend ul li {
   float: none;
   border: none;
   text-align: center;
+  height: 30px;
+  line-height: 30px;
 }
-.AQFnav ul > li.expend:hover ul {
+.AQFnav ul.first > li.expend ul li:hover {
+  background-color: #f5f6f7;
+}
+.AQFnav ul.first > li.expend:hover ul {
   display: block;
 }
 .AQFnav .date {
@@ -285,7 +286,7 @@ button {
   font-size: 16px;
 }
 @media (max-width: 960px) {
-  .AQFnav ul {
+  .AQFnav ul.first {
     padding: 0 10px;
   }
   .AQFnav .date {
@@ -293,10 +294,10 @@ button {
   }
 }
 @media (max-width: 680px) {
-  .AQFnav ul {
+  .AQFnav ul.first {
     padding: 0 10px;
   }
-  .AQFnav ul > li {
+  .AQFnav ul.first > li {
     margin-right: 4.5%;
   }
 }
