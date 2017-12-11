@@ -1,4 +1,4 @@
-//2017.12.8 薛启伟
+//2017.12.8 薛启伟 列表通用
 .cf() {
     // IE7-
     *zoom: 1; // others
@@ -173,34 +173,33 @@ main {
         }
     }
     .leftside {
-        margin-right: 310px; //头标
+        margin-right: 310px;
+        /*头标*/
         div.slogen {
-            height: 70px;
-            line-height: 70px;
-            background-color: #cde5d9;
-            background-image: -moz-linear-gradient( 0deg, #cde5d9 0%, #e4f3eb 100%);
-            background-image: -webkit-linear-gradient( 0deg, #cde5d9 0%, #e4f3eb 100%);
-            background-image: -ms-linear-gradient( 0deg, #cde5d9 0%, #e4f3eb 100%);
-            img {
-                float: left;
-                margin-left: 5px;
-                width: 100px;
-                height: 70px;
-            }
             h2 {
-                margin-left: 110px;
-                font-size: 24px;
                 height: 70px;
                 line-height: 70px;
-                color: #333;
-                font-weight: 600;
+                img {
+                    position: absolute;
+                    left: 0;
+                    top: 0;                    
+                    height: 70px;
+                }    
+                em{
+                    position: relative;
+                    z-index: 666;
+                    font-size: 24px;
+                    color: #333;
+                    font-weight: 600;
+                }
                 span {
                     font-size: 16px;
                     color: #666;
                     font-weight: 400;
                 }
             }
-        } //列表容器
+        }
+        /*列表容器*/
         ul {
             background-color: #fff;
             padding-bottom: 10px;
@@ -232,7 +231,6 @@ main {
                             margin-top: 10px;
                         }
                         &:nth-of-type(2) {
-                            margin-top: 10px;
                             position: absolute;
                             bottom: 30px;
                         }
@@ -251,7 +249,7 @@ main {
                         span {
                             padding: 0 10px;
                             &:first-of-type {
-                                padding-left: 0;
+                                padding:0 0;
                             }
                             &:last-of-type {
                                 padding-right: 0;
@@ -268,6 +266,14 @@ main {
                 }
                 &:last-of-type {
                     border-bottom: none;
+                }
+                >a{
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    z-index: 666;
                 }
             }
         } //分页
@@ -348,7 +354,7 @@ main {
 @media(max-width:640px) {
     main {
         .leftside {
-            ul{
+            ul {
                 padding: 0 20px;
                 li {
                     padding: 20px 0;
@@ -374,11 +380,11 @@ main {
                             span {
                                 padding: 0 6px;
                                 &:first-of-type {
-                                    padding-left: 0;
+                                    padding: 0 0;                                    
                                 }
                                 &:last-of-type {
                                     padding-right: 0;
-                                }                                
+                                }
                             }
                         }
                         p.text {
@@ -428,7 +434,7 @@ main {
                             span {
                                 padding: 0 2px;
                                 &:first-of-type {
-                                    padding-left: 0;
+                                    padding: 0 0
                                 }
                                 &:last-of-type {
                                     padding-right: 0;

@@ -196,7 +196,6 @@ main .leftside ul li .content p:nth-of-type(1) {
   margin-top: 10px;
 }
 main .leftside ul li .content p:nth-of-type(2) {
-  margin-top: 10px;
   position: absolute;
   bottom: 30px;
 }
@@ -392,15 +391,34 @@ main .leftside div.pagenav a.nextpage:hover:before {
   }
 }
 main .leftside div.slogen {
-  background-color: #cde5d9;
-  background-image: -moz-linear-gradient(0deg, #cde5d9 0%, #e4f3eb 100%);
-  background-image: -webkit-linear-gradient(0deg, #cde5d9 0%, #e4f3eb 100%);
-  background-image: -ms-linear-gradient(0deg, #cde5d9 0%, #e4f3eb 100%);
+  background-color: #ece1da;
+  background-image: -moz-linear-gradient(0deg, #ece1da 0%, #f8ede7 100%);
+  background-image: -webkit-linear-gradient(0deg, #ece1da 0%, #f8ede7 100%);
+  background-image: -ms-linear-gradient(0deg, #ece1da 0%, #f8ede7 100%);
 }
 main .leftside div.slogen img {
-  left: 5px;
-  width: 100px;
+  width: 138px;
+  z-index: 555;
 }
 main .leftside div.slogen h2 {
-  padding-left: 110px;
+  padding-left: 60px;
+}
+main .leftside ul.articlelist li .content p.author {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  color: #999;
+  bottom: inherit;
+}
+main .leftside ul.articlelist li .content p.author > span:first-of-type {
+  float: left;
+}
+main .leftside ul.articlelist li .content p.author > span:first-of-type img {
+  vertical-align: middle;
+  width: 34px;
+  height: 34px;
+}
+main .leftside ul.articlelist li .content p.author > span:last-of-type {
+  float: right;
+  line-height: 34px;
 }

@@ -1,0 +1,44 @@
+//2017.12.11 薛启伟 文章列表
+@import "../../css/public/list.less";
+main { 
+    .leftside { 
+        div.slogen {
+            background-color: #ece1da;
+            background-image: -moz-linear-gradient( 0deg, #ece1da 0%, #f8ede7 100%);
+            background-image: -webkit-linear-gradient( 0deg, #ece1da 0%, #f8ede7 100%);
+            background-image: -ms-linear-gradient( 0deg, #ece1da 0%, #f8ede7 100%);            
+            img {                
+                width: 138px;
+                z-index: 555;
+            }
+            h2 {                
+                padding-left: 60px;
+            }
+        }
+        ul.articlelist{
+            li{
+                .content{
+                    p.author{
+                        overflow: hidden;
+                        width: 100%;
+                        position: relative;                        
+                        color: #999;
+                        bottom: inherit;
+                        >span:first-of-type{
+                            float: left;
+                            img{
+                                vertical-align: middle;
+                                width: 34px;
+                                height: 34px;
+                            }
+                        }
+                        >span:last-of-type{
+                            float: right;
+                            line-height: 34px;
+                        }                        
+                    }
+                }
+            }
+        }
+    } 
+} 
