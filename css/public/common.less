@@ -126,7 +126,7 @@ button {
             position: relative;
             height: 50px;
             line-height: 50px;
-            margin-right: 3%;
+            margin-right: 2.5%;
             .bsz();
             border-bottom: 2px solid transparent;
             >a {
@@ -155,7 +155,8 @@ button {
             &:hover {
                 border-bottom: 2px solid #0078c3;
                 >a {
-                    color: #0078c3;                    
+                    color: #0078c3;
+                    text-shadow: .2px .2px #0078c3;                 
                     &:after {
                         // border-top: 6px solid #0078c3
                     }
@@ -166,7 +167,7 @@ button {
             border-bottom: 2px solid #0078c3;
             >a {
                 color: #0078c3;
-                font-weight: 600;
+                text-shadow: .2px .2px #0078c3;  
                 &:after {
                     border-top: 6px solid #0078c3
                 }
@@ -207,7 +208,9 @@ button {
     .date {
         position: absolute;
         border-left: 1px solid #ddd;
-        padding-left: 20px;
+        border-right: 1px solid #ddd;
+        width: 278px;
+        text-align: center;
         top: 0;
         right: 0;
         height: 50px;

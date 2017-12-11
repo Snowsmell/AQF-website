@@ -1,0 +1,332 @@
+/*单行载断*/
+/*多行载断*/
+.container {
+  max-width: 1200px;
+  position: relative;
+  margin: 0 auto;
+}
+.brandnav {
+  height: 50px;
+  line-height: 50px;
+  color: #999;
+  font-size: 14px;
+}
+.brandnav a {
+  color: #333;
+}
+.brandnav a:hover {
+  color: #0078c3;
+}
+@media (max-width: 1200px) {
+  .brandnav {
+    padding: 0 30px;
+  }
+}
+@media (max-width: 640px) {
+  .brandnav {
+    padding: 0 20px;
+  }
+}
+@media (max-width: 480px) {
+  .brandnav {
+    padding: 0 10px;
+  }
+}
+body {
+  background-color: #f5f6f9;
+}
+main {
+  overflow: hidden;
+}
+main div {
+  box-sizing: border-box;
+}
+main .rightside {
+  float: right;
+  width: 280px;
+}
+main .rightside > div {
+  background-color: #fff;
+  margin-bottom: 35px;
+}
+main .rightside > div h2 {
+  font-size: 18px;
+  color: #333;
+  height: 50px;
+  line-height: 50px;
+  box-sizing: border-box;
+  padding: 0 20px;
+  border-bottom: 1px solid #f5f6f9;
+}
+main .rightside > div h2 span i {
+  font-size: 14px;
+}
+main .rightside div.getdata div {
+  padding: 20px;
+}
+main .rightside div.getdata div input {
+  width: 100%;
+  height: 36px;
+  line-height: 36px;
+  border: 1px solid #ddd;
+  outline: none;
+  margin-top: 16px;
+}
+main .rightside div.getdata div input[type=text]:focus {
+  border: 1px solid #ffb013;
+}
+main .rightside div.getdata div input[type=submit] {
+  font-size: 18px;
+  height: 45px;
+  color: #fff;
+  background-color: #ffb013;
+  border: none;
+}
+main .rightside div.recommend div {
+  position: relative;
+}
+main .rightside div.recommend div img {
+  width: 100%;
+  max-width: 280px;
+}
+main .rightside div.recommend div p {
+  position: absolute;
+  height: 36px;
+  line-height: 36px;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  bottom: 0;
+  color: #fff;
+  padding-left: 20px;
+  letter-spacing: 1px;
+  box-sizing: border-box;
+}
+main .rightside div.recommend div a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+main .rightside div.questions ul {
+  padding: 0 20px;
+}
+main .rightside div.questions ul li a {
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #eee;
+  color: #666;
+  overflow: hidden;
+  display: -webkit-box;
+  word-break: break-all;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+main .rightside div.questions ul li a i {
+  font-size: 12px;
+}
+main .rightside div.questions ul li a:hover {
+  color: #0078c3;
+}
+main .leftside {
+  margin-right: 310px;
+}
+main .leftside ul {
+  background-color: #fff;
+  padding-bottom: 10px;
+  padding: 0 30px;
+}
+main .leftside div.pagenav {
+  margin: 35px 0;
+  text-align: center;
+}
+main .leftside div.pagenav a {
+  display: inline-block;
+  text-align: center;
+  padding: 0 7px;
+  height: 25px;
+  line-height: 25px;
+  box-sizing: border-box;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  margin-right: 4px;
+  position: relative;
+}
+main .leftside div.pagenav a:hover {
+  background-color: #0078c3;
+  color: #fff;
+}
+main .leftside div.pagenav span {
+  margin-right: 4px;
+}
+main .leftside div.pagenav a.prevpage:before,
+main .leftside div.pagenav a.nextpage:before {
+  content: "";
+  position: absolute;
+  transition: all .5s;
+  width: 0;
+  height: 0;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid transparent;
+  top: 9px;
+}
+main .leftside div.pagenav a.prevpage {
+  padding-left: 12px;
+}
+main .leftside div.pagenav a.prevpage:before {
+  border-right: 6px solid #666;
+  left: 4px;
+}
+main .leftside div.pagenav a.prevpage:hover:before {
+  border-right: 6px solid #fff;
+}
+main .leftside div.pagenav a.nextpage {
+  padding-right: 12px;
+}
+main .leftside div.pagenav a.nextpage:before {
+  border-left: 6px solid #666;
+  right: 3px;
+}
+main .leftside div.pagenav a.nextpage:hover:before {
+  border-left: 6px solid #fff;
+}
+@media (max-width: 960px) {
+  main .rightside {
+    display: none;
+  }
+  main .leftside {
+    margin-right: 0;
+  }
+}
+main .leftside ul.infolist li {
+  padding: 30px 0;
+  border-bottom: 1px solid #ddd;
+  overflow: hidden;
+  position: relative;
+}
+main .leftside ul.infolist li .imgbox {
+  float: left;
+  width: 228px;
+  height: 152px;
+}
+main .leftside ul.infolist li .imgbox img {
+  width: 100%;
+  max-width: 228px;
+}
+main .leftside ul.infolist li .content {
+  margin-left: 254px;
+}
+main .leftside ul.infolist li .content h3 {
+  font-size: 20px;
+  color: #333;
+  overflow: hidden;
+  display: -webkit-box;
+  word-break: break-all;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+main .leftside ul.infolist li .content p {
+  font-size: 14px;
+}
+main .leftside ul.infolist li .content p.time {
+  color: #999;
+  margin-top: 10px;
+}
+main .leftside ul.infolist li .content p.time span {
+  padding: 0 10px;
+}
+main .leftside ul.infolist li .content p.time span:first-of-type {
+  padding-left: 0;
+}
+main .leftside ul.infolist li .content p.time span:last-of-type {
+  padding-right: 0;
+  position: relative;
+}
+main .leftside ul.infolist li .content p.time span:last-of-type:before {
+  content: '|';
+  position: absolute;
+  left: 0;
+  color: #999;
+}
+main .leftside ul.infolist li .content p.text {
+  color: #666;
+  position: absolute;
+  bottom: 30px;
+  line-height: 26px;
+  text-align: justify;
+  overflow: hidden;
+  display: -webkit-box;
+  word-break: break-all;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+main .leftside ul.infolist li:last-of-type {
+  border-bottom: none;
+}
+@media (max-width: 640px) {
+  main .leftside ul.infolist {
+    padding: 0 20px;
+  }
+  main .leftside ul.infolist li {
+    padding: 20px 0;
+  }
+  main .leftside ul.infolist li .imgbox {
+    width: 165px;
+    height: 110px;
+  }
+  main .leftside ul.infolist li .content {
+    margin-left: 180px;
+  }
+  main .leftside ul.infolist li .content h3 {
+    font-size: 18px;
+  }
+  main .leftside ul.infolist li .content p.time {
+    margin-top: 5px;
+  }
+  main .leftside ul.infolist li .content p.time span {
+    padding: 0 6px;
+  }
+  main .leftside ul.infolist li .content p.text {
+    bottom: 20px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 480px) {
+  main .leftside ul.infolist {
+    padding: 0 10px;
+  }
+  main .leftside ul.infolist li {
+    padding: 15px 0;
+  }
+  main .leftside ul.infolist li .imgbox {
+    width: 120px;
+    height: 80px;
+  }
+  main .leftside ul.infolist li .content {
+    margin-left: 125px;
+  }
+  main .leftside ul.infolist li .content p {
+    font-size: 12px;
+  }
+  main .leftside ul.infolist li .content h3 {
+    font-size: 14px;
+  }
+  main .leftside ul.infolist li .content p.time {
+    margin-top: 3px;
+  }
+  main .leftside ul.infolist li .content p.time span {
+    padding: 0 2px;
+  }
+  main .leftside ul.infolist li .content p.text {
+    bottom: 15px;
+    letter-spacing: .1px;
+    line-height: 14px;
+  }
+}
+@media (max-width: 360px) {
+  main .leftside ul.infolist li .content p.time span:last-of-type {
+    display: none;
+  }
+}

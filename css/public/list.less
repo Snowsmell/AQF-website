@@ -1,0 +1,251 @@
+//2017.12.8 薛启伟
+.cf() {
+    // IE7-
+    *zoom: 1; // others
+    &:after {
+        content: " ";
+        clear: both;
+        display: table;
+    }
+}
+
+
+/*单行载断*/
+
+.clip() {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: clip;
+}
+
+
+/*多行载断*/
+
+.spill(@n) {
+    overflow: hidden;
+    display: -webkit-box;
+    word-break: break-all;
+    -webkit-line-clamp: @n;
+    -webkit-box-orient: vertical;
+}
+
+//通用容器
+.container {
+    max-width: 1200px;
+    position: relative;
+    margin: 0 auto;
+}
+
+// 面包屑
+.brandnav {
+    height: 50px;
+    line-height: 50px;
+    color: #999;
+    font-size: 14px;
+    a {
+        color: #333;
+        &:hover {
+            color: #0078c3;
+        }
+    }
+}
+
+@media(max-width:1200px) {
+    .brandnav {
+        padding: 0 30px;
+    }
+}
+@media(max-width:640px){
+    .brandnav {
+        padding: 0 20px;
+    }
+}
+@media(max-width:480px){
+    .brandnav {
+        padding: 0 10px;
+    }
+}
+body {
+    background-color: #f5f6f9;
+}
+
+main {
+    overflow: hidden;
+    div {
+        box-sizing: border-box;
+    }
+    .rightside {
+        float: right;
+        width: 280px;
+        >div {
+            background-color: #fff;
+            margin-bottom: 35px;
+            h2 {
+                font-size: 18px;
+                color: #333;
+                height: 50px;
+                line-height: 50px;
+                box-sizing: border-box;
+                padding: 0 20px;
+                border-bottom: 1px solid #f5f6f9;
+                span {
+                    i {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+        div.getdata {
+            div {
+                padding: 20px;
+                input {
+                    width: 100%;
+                    height: 36px;
+                    line-height: 36px;
+                    border: 1px solid #ddd;
+                    outline: none;
+                    margin-top: 16px;
+                }
+                input[type=text]:focus {
+                    border: 1px solid #ffb013;
+                }
+                input[type=submit] {
+                    font-size: 18px;
+                    height: 45px;
+                    color: #fff;
+                    background-color: #ffb013;
+                    border: none;
+                }
+            }
+        }
+        div.recommend {
+            div {
+                position: relative;
+                img {
+                    width: 100%;
+                    max-width: 280px;
+                }
+                p {
+                    position: absolute;
+                    height: 36px;
+                    line-height: 36px;
+                    background-color: rgba(0, 0, 0, .4);
+                    width: 100%;
+                    bottom: 0;
+                    color: #fff;
+                    padding-left: 20px;
+                    letter-spacing: 1px;
+                    box-sizing: border-box;
+                }
+                a {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0
+                }
+            }
+        }
+        div.questions {
+            ul {
+                padding: 0 20px;
+                li {
+                    a {
+                        display: block;
+                        height: 50px;
+                        line-height: 50px;
+                        box-sizing: border-box;
+                        border-bottom: 1px solid #eee;
+                        color: #666;
+                        .spill(1);
+                        i {
+                            font-size: 12px;
+                        }
+                        &:hover {
+                            color: #0078c3
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .leftside {
+        margin-right: 310px;
+        ul {
+            background-color: #fff;
+            padding-bottom: 10px;
+            padding: 0 30px;
+        }
+        div.pagenav {
+            margin: 35px 0;
+            text-align: center;
+            a {
+                display: inline-block;
+                text-align: center;
+                padding: 0 7px;
+                height: 25px;
+                line-height: 25px;
+                box-sizing: border-box;
+                background-color: #fff;
+                border: 1px solid #ddd;
+                margin-right: 4px;
+                position: relative;
+                &:hover {
+                    background-color: #0078c3;
+                    color: #fff;
+                }
+            }
+            span {
+                margin-right: 4px;
+            }
+            a.prevpage,
+            a.nextpage {
+                &:before {
+                    content: "";
+                    position: absolute;
+                    transition: all .5s;
+                    width: 0;
+                    height: 0;
+                    border-bottom: 3px solid transparent;
+                    border-top: 3px solid transparent;
+                    top: 9px;
+                }
+            }
+            a.prevpage {
+                padding-left: 12px;
+                &:before {
+                    border-right: 6px solid #666;
+                    left: 4px;
+                }
+                &:hover {
+                    &:before {
+                        border-right: 6px solid #fff;
+                    }
+                }
+            }
+            a.nextpage {
+                padding-right: 12px;
+                &:before {
+                    border-left: 6px solid #666;
+                    right: 3px;
+                }
+                &:hover {
+                    &:before {
+                        border-left: 6px solid #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:960px) {
+    main {
+        .rightside {
+            display: none;
+        }
+        .leftside {
+            margin-right: 0;
+        }
+    }
+}
