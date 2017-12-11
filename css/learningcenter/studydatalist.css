@@ -165,6 +165,79 @@ main .leftside ul {
   padding-bottom: 10px;
   padding: 0 30px;
 }
+main .leftside ul li {
+  padding: 30px 0;
+  border-bottom: 1px solid #ddd;
+  overflow: hidden;
+  position: relative;
+}
+main .leftside ul li .imgbox {
+  float: left;
+  width: 228px;
+  height: 152px;
+}
+main .leftside ul li .imgbox img {
+  width: 100%;
+  max-width: 228px;
+}
+main .leftside ul li .content {
+  margin-left: 254px;
+}
+main .leftside ul li .content h3 {
+  font-size: 20px;
+  color: #333;
+  overflow: hidden;
+  display: -webkit-box;
+  word-break: break-all;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+main .leftside ul li .content p {
+  font-size: 14px;
+}
+main .leftside ul li .content p:nth-of-type(1) {
+  margin-top: 10px;
+}
+main .leftside ul li .content p:nth-of-type(2) {
+  margin-top: 10px;
+  position: absolute;
+  bottom: 30px;
+}
+main .leftside ul li .content p.text {
+  color: #666;
+  line-height: 26px;
+  text-align: justify;
+  overflow: hidden;
+  display: -webkit-box;
+  word-break: break-all;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+main .leftside ul li .content p.text span {
+  text-shadow: .1px .1px #666;
+}
+main .leftside ul li .content p.time {
+  color: #999;
+}
+main .leftside ul li .content p.time span {
+  padding: 0 10px;
+}
+main .leftside ul li .content p.time span:first-of-type {
+  padding-left: 0;
+}
+main .leftside ul li .content p.time span:last-of-type {
+  padding-right: 0;
+  position: relative;
+}
+main .leftside ul li .content p.time span:last-of-type:before {
+  content: '|';
+  position: absolute;
+  left: 0;
+  color: #999;
+}
+main .leftside ul li:last-of-type {
+  border-bottom: none;
+}
 main .leftside div.pagenav {
   margin: 35px 0;
   text-align: center;
@@ -227,141 +300,89 @@ main .leftside div.pagenav a.nextpage:hover:before {
     margin-right: 0;
   }
 }
-@media (max-width: 480px) {
-  main .leftside div.slogen h2 span {
-    display: none;
-  }
-}
-main .leftside ul.infolist li {
-  padding: 30px 0;
-  border-bottom: 1px solid #ddd;
-  overflow: hidden;
-  position: relative;
-}
-main .leftside ul.infolist li .imgbox {
-  float: left;
-  width: 228px;
-  height: 152px;
-}
-main .leftside ul.infolist li .imgbox img {
-  width: 100%;
-  max-width: 228px;
-}
-main .leftside ul.infolist li .content {
-  margin-left: 254px;
-}
-main .leftside ul.infolist li .content h3 {
-  font-size: 20px;
-  color: #333;
-  overflow: hidden;
-  display: -webkit-box;
-  word-break: break-all;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
-}
-main .leftside ul.infolist li .content p {
-  font-size: 14px;
-}
-main .leftside ul.infolist li .content p.text {
-  margin-top: 10px;
-  color: #666;
-  line-height: 26px;
-  text-align: justify;
-  overflow: hidden;
-  display: -webkit-box;
-  word-break: break-all;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-}
-main .leftside ul.infolist li .content p.text span {
-  text-shadow: .1px .1px #666;
-}
-main .leftside ul.infolist li .content p.time {
-  color: #999;
-  position: absolute;
-  bottom: 30px;
-}
-main .leftside ul.infolist li .content p.time span {
-  padding: 0 10px;
-}
-main .leftside ul.infolist li .content p.time span:first-of-type {
-  padding-left: 0;
-}
-main .leftside ul.infolist li .content p.time span:last-of-type {
-  padding-right: 0;
-  position: relative;
-}
-main .leftside ul.infolist li .content p.time span:last-of-type:before {
-  content: '|';
-  position: absolute;
-  left: 0;
-  color: #999;
-}
-main .leftside ul.infolist li:last-of-type {
-  border-bottom: none;
-}
 @media (max-width: 640px) {
-  main .leftside ul.infolist {
+  main .leftside ul {
     padding: 0 20px;
   }
-  main .leftside ul.infolist li {
+  main .leftside ul li {
     padding: 20px 0;
   }
-  main .leftside ul.infolist li .imgbox {
+  main .leftside ul li .imgbox {
     width: 165px;
     height: 110px;
   }
-  main .leftside ul.infolist li .content {
+  main .leftside ul li .content {
     margin-left: 180px;
   }
-  main .leftside ul.infolist li .content h3 {
+  main .leftside ul li .content h3 {
     font-size: 18px;
   }
-  main .leftside ul.infolist li .content p.time {
+  main .leftside ul li .content p:nth-of-type(1) {
+    margin-top: 5px;
+  }
+  main .leftside ul li .content p:nth-of-type(2) {
+    position: absolute;
     bottom: 20px;
   }
-  main .leftside ul.infolist li .content p.time span {
+  main .leftside ul li .content p.time span {
     padding: 0 6px;
   }
-  main .leftside ul.infolist li .content p.text {
-    margin-top: 5px;
+  main .leftside ul li .content p.time span:first-of-type {
+    padding-left: 0;
+  }
+  main .leftside ul li .content p.time span:last-of-type {
+    padding-right: 0;
+  }
+  main .leftside ul li .content p.text {
     line-height: 20px;
   }
 }
 @media (max-width: 480px) {
-  main .leftside ul.infolist {
+  main .leftside div.slogen h2 span {
+    display: none;
+  }
+  main .leftside ul {
     padding: 0 10px;
   }
-  main .leftside ul.infolist li {
+  main .leftside ul li {
     padding: 15px 0;
   }
-  main .leftside ul.infolist li .imgbox {
+  main .leftside ul li .imgbox {
     width: 120px;
     height: 80px;
   }
-  main .leftside ul.infolist li .content {
+  main .leftside ul li .content {
     margin-left: 125px;
   }
-  main .leftside ul.infolist li .content p {
+  main .leftside ul li .content p {
     font-size: 12px;
   }
-  main .leftside ul.infolist li .content h3 {
-    font-size: 14px;
+  main .leftside ul li .content p:nth-of-type(1) {
+    margin-top: 3px;
   }
-  main .leftside ul.infolist li .content p.time {
+  main .leftside ul li .content p:nth-of-type(2) {
+    position: absolute;
     bottom: 15px;
   }
-  main .leftside ul.infolist li .content p.time span {
+  main .leftside ul li .content h3 {
+    font-size: 14px;
+  }
+  main .leftside ul li .content p.time span {
     padding: 0 2px;
   }
-  main .leftside ul.infolist li .content p.text {
-    margin-top: 3px;
+  main .leftside ul li .content p.time span:first-of-type {
+    padding-left: 0;
+  }
+  main .leftside ul li .content p.time span:last-of-type {
+    padding-right: 0;
+  }
+  main .leftside ul li .content p.text {
     letter-spacing: .1px;
     line-height: 14px;
   }
 }
 @media (max-width: 360px) {
-  main .leftside ul.infolist li .content p.time span:last-of-type {
+  main .leftside ul li .content p.time span:last-of-type {
     display: none;
   }
 }

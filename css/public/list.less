@@ -55,16 +55,19 @@
         padding: 0 30px;
     }
 }
-@media(max-width:640px){
+
+@media(max-width:640px) {
     .brandnav {
         padding: 0 20px;
     }
 }
-@media(max-width:480px){
+
+@media(max-width:480px) {
     .brandnav {
         padding: 0 10px;
     }
 }
+
 body {
     background-color: #f5f6f9;
 }
@@ -170,42 +173,104 @@ main {
         }
     }
     .leftside {
-        margin-right: 310px;
-        //头标
-        div.slogen{
+        margin-right: 310px; //头标
+        div.slogen {
             height: 70px;
             line-height: 70px;
             background-color: #cde5d9;
             background-image: -moz-linear-gradient( 0deg, #cde5d9 0%, #e4f3eb 100%);
             background-image: -webkit-linear-gradient( 0deg, #cde5d9 0%, #e4f3eb 100%);
             background-image: -ms-linear-gradient( 0deg, #cde5d9 0%, #e4f3eb 100%);
-            img{
-              float: left;
-              margin-left: 5px;
-              width: 100px;
-              height: 70px;
+            img {
+                float: left;
+                margin-left: 5px;
+                width: 100px;
+                height: 70px;
             }
-            h2{
-              margin-left: 110px;
-              font-size: 24px;
-              height: 70px;
-              line-height: 70px;
-              color:#333;
-              font-weight: 600;
-              span{
-                font-size: 16px;
-                color:#666;
-                font-weight: 400;
-              }
+            h2 {
+                margin-left: 110px;
+                font-size: 24px;
+                height: 70px;
+                line-height: 70px;
+                color: #333;
+                font-weight: 600;
+                span {
+                    font-size: 16px;
+                    color: #666;
+                    font-weight: 400;
+                }
             }
-          }
-        //列表容器
+        } //列表容器
         ul {
             background-color: #fff;
             padding-bottom: 10px;
             padding: 0 30px;
-        }
-        //分页
+            li {
+                padding: 30px 0;
+                border-bottom: 1px solid #ddd;
+                overflow: hidden;
+                position: relative;
+                .imgbox {
+                    float: left;
+                    width: 228px;
+                    height: 152px;
+                    img {
+                        width: 100%;
+                        max-width: 228px;
+                    }
+                }
+                .content {
+                    margin-left: 254px;
+                    h3 {
+                        font-size: 20px;
+                        color: #333;
+                        .spill(1);
+                    }
+                    p {
+                        font-size: 14px;
+                        &:nth-of-type(1) {
+                            margin-top: 10px;
+                        }
+                        &:nth-of-type(2) {
+                            margin-top: 10px;
+                            position: absolute;
+                            bottom: 30px;
+                        }
+                    }
+                    p.text {
+                        color: #666;
+                        line-height: 26px;
+                        text-align: justify;
+                        span {
+                            text-shadow: .1px .1px #666;
+                        }
+                        .spill(3);
+                    }
+                    p.time {
+                        color: #999;
+                        span {
+                            padding: 0 10px;
+                            &:first-of-type {
+                                padding-left: 0;
+                            }
+                            &:last-of-type {
+                                padding-right: 0;
+                                position: relative;
+                                &:before {
+                                    content: '|';
+                                    position: absolute;
+                                    left: 0;
+                                    color: #999;
+                                }
+                            }
+                        }
+                    }
+                }
+                &:last-of-type {
+                    border-bottom: none;
+                }
+            }
+        } //分页
         div.pagenav {
             margin: 35px 0;
             text-align: center;
@@ -279,12 +344,120 @@ main {
         }
     }
 }
-@media(max-width:480px){
-    main{
-        .leftside{
-            div.slogen{
-                h2{
-                    span{display: none;}
+
+@media(max-width:640px) {
+    main {
+        .leftside {
+            ul{
+                padding: 0 20px;
+                li {
+                    padding: 20px 0;
+                    .imgbox {
+                        width: 165px;
+                        height: 110px;
+                    }
+                    .content {
+                        margin-left: 180px;
+                        h3 {
+                            font-size: 18px;
+                        }
+                        p {
+                            &:nth-of-type(1) {
+                                margin-top: 5px;
+                            }
+                            &:nth-of-type(2) {
+                                position: absolute;
+                                bottom: 20px;
+                            }
+                        }
+                        p.time {
+                            span {
+                                padding: 0 6px;
+                                &:first-of-type {
+                                    padding-left: 0;
+                                }
+                                &:last-of-type {
+                                    padding-right: 0;
+                                }                                
+                            }
+                        }
+                        p.text {
+                            line-height: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:480px) {
+    main {
+        .leftside {
+            div.slogen {
+                h2 {
+                    span {
+                        display: none;
+                    }
+                }
+            }
+            ul {
+                padding: 0 10px;
+                li {
+                    padding: 15px 0;
+                    .imgbox {
+                        width: 120px;
+                        height: 80px;
+                    }
+                    .content {
+                        margin-left: 125px;
+                        p {
+                            font-size: 12px;
+                            &:nth-of-type(1) {
+                                margin-top: 3px;
+                            }
+                            &:nth-of-type(2) {
+                                position: absolute;
+                                bottom: 15px;
+                            }
+                        }
+                        h3 {
+                            font-size: 14px;
+                        }
+                        p.time {
+                            span {
+                                padding: 0 2px;
+                                &:first-of-type {
+                                    padding-left: 0;
+                                }
+                                &:last-of-type {
+                                    padding-right: 0;
+                                }
+                            }
+                        }
+                        p.text {
+                            letter-spacing: .1px;
+                            line-height: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:360px) {
+    main {
+        .leftside {
+            ul {
+                li {
+                    .content {
+                        p.time {
+                            span:last-of-type {
+                                display: none;
+                            }
+                        }
+                    }
                 }
             }
         }
