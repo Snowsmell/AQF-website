@@ -171,11 +171,41 @@ main {
     }
     .leftside {
         margin-right: 310px;
+        //头标
+        div.slogen{
+            height: 70px;
+            line-height: 70px;
+            background-color: #cde5d9;
+            background-image: -moz-linear-gradient( 0deg, #cde5d9 0%, #e4f3eb 100%);
+            background-image: -webkit-linear-gradient( 0deg, #cde5d9 0%, #e4f3eb 100%);
+            background-image: -ms-linear-gradient( 0deg, #cde5d9 0%, #e4f3eb 100%);
+            img{
+              float: left;
+              margin-left: 5px;
+              width: 100px;
+              height: 70px;
+            }
+            h2{
+              margin-left: 110px;
+              font-size: 24px;
+              height: 70px;
+              line-height: 70px;
+              color:#333;
+              font-weight: 600;
+              span{
+                font-size: 16px;
+                color:#666;
+                font-weight: 400;
+              }
+            }
+          }
+        //列表容器
         ul {
             background-color: #fff;
             padding-bottom: 10px;
             padding: 0 30px;
         }
+        //分页
         div.pagenav {
             margin: 35px 0;
             text-align: center;
@@ -246,6 +276,17 @@ main {
         }
         .leftside {
             margin-right: 0;
+        }
+    }
+}
+@media(max-width:480px){
+    main{
+        .leftside{
+            div.slogen{
+                h2{
+                    span{display: none;}
+                }
+            }
         }
     }
 }

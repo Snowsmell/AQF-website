@@ -232,3 +232,136 @@ main .leftside div.pagenav a.nextpage:hover:before {
     display: none;
   }
 }
+main .leftside ul.infolist li {
+  padding: 30px 0;
+  border-bottom: 1px solid #ddd;
+  overflow: hidden;
+  position: relative;
+}
+main .leftside ul.infolist li .imgbox {
+  float: left;
+  width: 228px;
+  height: 152px;
+}
+main .leftside ul.infolist li .imgbox img {
+  width: 100%;
+  max-width: 228px;
+}
+main .leftside ul.infolist li .content {
+  margin-left: 254px;
+}
+main .leftside ul.infolist li .content h3 {
+  font-size: 20px;
+  color: #333;
+  overflow: hidden;
+  display: -webkit-box;
+  word-break: break-all;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+main .leftside ul.infolist li .content p {
+  font-size: 14px;
+}
+main .leftside ul.infolist li .content p.text {
+  margin-top: 10px;
+  color: #666;
+  line-height: 26px;
+  text-align: justify;
+  overflow: hidden;
+  display: -webkit-box;
+  word-break: break-all;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+main .leftside ul.infolist li .content p.text span {
+  text-shadow: .1px .1px #666;
+}
+main .leftside ul.infolist li .content p.time {
+  color: #999;
+  position: absolute;
+  bottom: 30px;
+}
+main .leftside ul.infolist li .content p.time span {
+  padding: 0 10px;
+}
+main .leftside ul.infolist li .content p.time span:first-of-type {
+  padding-left: 0;
+}
+main .leftside ul.infolist li .content p.time span:last-of-type {
+  padding-right: 0;
+  position: relative;
+}
+main .leftside ul.infolist li .content p.time span:last-of-type:before {
+  content: '|';
+  position: absolute;
+  left: 0;
+  color: #999;
+}
+main .leftside ul.infolist li:last-of-type {
+  border-bottom: none;
+}
+@media (max-width: 640px) {
+  main .leftside ul.infolist {
+    padding: 0 20px;
+  }
+  main .leftside ul.infolist li {
+    padding: 20px 0;
+  }
+  main .leftside ul.infolist li .imgbox {
+    width: 165px;
+    height: 110px;
+  }
+  main .leftside ul.infolist li .content {
+    margin-left: 180px;
+  }
+  main .leftside ul.infolist li .content h3 {
+    font-size: 18px;
+  }
+  main .leftside ul.infolist li .content p.time {
+    bottom: 20px;
+  }
+  main .leftside ul.infolist li .content p.time span {
+    padding: 0 6px;
+  }
+  main .leftside ul.infolist li .content p.text {
+    margin-top: 5px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 480px) {
+  main .leftside ul.infolist {
+    padding: 0 10px;
+  }
+  main .leftside ul.infolist li {
+    padding: 15px 0;
+  }
+  main .leftside ul.infolist li .imgbox {
+    width: 120px;
+    height: 80px;
+  }
+  main .leftside ul.infolist li .content {
+    margin-left: 125px;
+  }
+  main .leftside ul.infolist li .content p {
+    font-size: 12px;
+  }
+  main .leftside ul.infolist li .content h3 {
+    font-size: 14px;
+  }
+  main .leftside ul.infolist li .content p.time {
+    bottom: 15px;
+  }
+  main .leftside ul.infolist li .content p.time span {
+    padding: 0 2px;
+  }
+  main .leftside ul.infolist li .content p.text {
+    margin-top: 3px;
+    letter-spacing: .1px;
+    line-height: 14px;
+  }
+}
+@media (max-width: 360px) {
+  main .leftside ul.infolist li .content p.time span:last-of-type {
+    display: none;
+  }
+}
