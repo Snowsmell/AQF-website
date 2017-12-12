@@ -1,0 +1,217 @@
+//2017.12.12 薛启伟 课程列表
+@import "../../css/public/list.less";
+//广告  
+.adv {
+    margin-top: 20px;
+    img {
+        max-width: 100%;
+    }
+}
+
+main {
+    .leftside {
+        //头标
+        div.slogen {
+            background-color: #d5dde1;
+            background-image: -moz-linear-gradient( 0deg, #d5dde1 0%, #e8eef2 100%);
+            background-image: -webkit-linear-gradient( 0deg, #d5dde1 0%, #e8eef2 100%);
+            background-image: -ms-linear-gradient( 0deg, #d5dde1 0%, #e8eef2 100%);
+            img {
+                left: 0px;
+                width: 112px;
+            }
+            h2 {
+                padding-left: 56px;
+            }
+        } //课程列表
+        ul.courselist {
+            padding: 0;
+            li {
+                padding: 31.5px 30px;
+                div.tosign {
+                    margin-left: 254px;
+                    h3 {
+                        font-size: 20px;
+                        color: #333;
+                        .spill(1);
+                        transition: all .5s;
+                    }
+                    >div {
+                        padding-right: 120px;
+                        a {
+                            top: 100px;
+                            position: absolute;
+                            width: 120px;
+                            box-sizing: border-box;
+                            text-align: center;
+                            height: 34px;
+                            line-height: 34px;
+                            color: #0078c3;
+                            border: 1px solid #0078c3;
+                            right: 30px;
+                        }
+                        div.price {
+                            margin: 15px 0;
+                            span {
+                                color: #999;
+                                em {
+                                    text-decoration: line-through
+                                }
+                                &:first-of-type {
+                                    color: #ff310f;
+                                    margin-right: 30px;
+                                    em {
+                                        font-size: 24px;
+                                        text-decoration: none
+                                    }
+                                }
+                            }
+                        }
+                        p {
+                            padding-left: 70px;
+                            position: relative;
+                            color: #666;
+                            margin-top: 5px;
+                            span {
+                                position: absolute;
+                                width: 5em;
+                                left: 0;
+                            }
+                        }
+                    }
+                }
+                &:hover {
+                    box-shadow: 0px 2px 4px #ddd;
+                    border-bottom: 1px solid transparent;
+                    div.tosign {
+                        h3 {
+                            color: #0078c3;
+                        }
+                        >div {
+                            a {
+                                color: #fff;
+                                background-color: #0078c3;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:1200px) {
+    main {
+        .leftside {
+            ul.courselist {
+                li {
+                    div.tosign {
+                        >div {
+                            a {
+                                right: 20px
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:960px) {
+    main {
+        .leftside {
+            ul.courselist {
+                li {
+                    padding: 20px;
+                    div.tosign {
+                        >div {
+                            padding-right: 80px;
+                            a {
+                                width: 80px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width:640px){
+    main{
+        .leftside{
+            ul.courselist{
+                li{
+                    div.tosign{
+                        margin-left: 180px;
+                        h3{
+                            font-size: 18px;
+                        }
+                        >div{
+                            padding-right: 0;
+                            a{
+                                display: none;
+                            }
+                            div.price{
+                                margin: 5px 0;
+                                span{
+                                    &:first-of-type {
+                                        margin-right: 20px;
+                                        em {
+                                            font-size: 18px;
+                                        }
+                                    }
+                                }
+                            }
+                            p{
+                                margin-top: 3px;
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width:480px){
+    main{
+        .leftside{
+            ul.courselist{
+                li{
+                    padding: 10px;
+                    div.tosign{
+                        margin-left: 125px;
+                        h3{
+                            font-size: 16px;
+                        }
+                        >div{
+                            padding-right: 0;
+                            a{
+                                display: none;
+                            }
+                            div.price{
+                                span{
+                                    &:first-of-type {
+                                        margin-right: 20px;
+                                        em {
+                                            font-size: 16px;
+                                        }
+                                    }
+                                }
+                            }
+                            p{
+                                padding-left: 0;
+                                .spill(2);
+                                span,
+                                &:nth-of-type(2){
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

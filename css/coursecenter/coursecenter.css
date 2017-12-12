@@ -390,3 +390,173 @@ main .leftside div.pagenav a.nextpage:hover:before {
     display: none;
   }
 }
+.adv {
+  margin-top: 20px;
+}
+.adv img {
+  max-width: 100%;
+}
+main .leftside div.slogen {
+  background-color: #d5dde1;
+  background-image: -moz-linear-gradient(0deg, #d5dde1 0%, #e8eef2 100%);
+  background-image: -webkit-linear-gradient(0deg, #d5dde1 0%, #e8eef2 100%);
+  background-image: -ms-linear-gradient(0deg, #d5dde1 0%, #e8eef2 100%);
+}
+main .leftside div.slogen img {
+  left: 0px;
+  width: 112px;
+}
+main .leftside div.slogen h2 {
+  padding-left: 56px;
+}
+main .leftside ul.courselist {
+  padding: 0;
+}
+main .leftside ul.courselist li {
+  padding: 31.5px 30px;
+}
+main .leftside ul.courselist li div.tosign {
+  margin-left: 254px;
+}
+main .leftside ul.courselist li div.tosign h3 {
+  font-size: 20px;
+  color: #333;
+  overflow: hidden;
+  display: -webkit-box;
+  word-break: break-all;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  transition: all .5s;
+}
+main .leftside ul.courselist li div.tosign > div {
+  padding-right: 120px;
+}
+main .leftside ul.courselist li div.tosign > div a {
+  top: 100px;
+  position: absolute;
+  width: 120px;
+  box-sizing: border-box;
+  text-align: center;
+  height: 34px;
+  line-height: 34px;
+  color: #0078c3;
+  border: 1px solid #0078c3;
+  right: 30px;
+}
+main .leftside ul.courselist li div.tosign > div div.price {
+  margin: 15px 0;
+}
+main .leftside ul.courselist li div.tosign > div div.price span {
+  color: #999;
+}
+main .leftside ul.courselist li div.tosign > div div.price span em {
+  text-decoration: line-through;
+}
+main .leftside ul.courselist li div.tosign > div div.price span:first-of-type {
+  color: #ff310f;
+  margin-right: 30px;
+}
+main .leftside ul.courselist li div.tosign > div div.price span:first-of-type em {
+  font-size: 24px;
+  text-decoration: none;
+}
+main .leftside ul.courselist li div.tosign > div p {
+  padding-left: 70px;
+  position: relative;
+  color: #666;
+  margin-top: 5px;
+}
+main .leftside ul.courselist li div.tosign > div p span {
+  position: absolute;
+  width: 5em;
+  left: 0;
+}
+main .leftside ul.courselist li:hover {
+  box-shadow: 0px 2px 4px #ddd;
+  border-bottom: 1px solid transparent;
+}
+main .leftside ul.courselist li:hover div.tosign h3 {
+  color: #0078c3;
+}
+main .leftside ul.courselist li:hover div.tosign > div a {
+  color: #fff;
+  background-color: #0078c3;
+}
+@media (max-width: 1200px) {
+  main .leftside ul.courselist li div.tosign > div a {
+    right: 20px;
+  }
+}
+@media (max-width: 960px) {
+  main .leftside ul.courselist li {
+    padding: 20px;
+  }
+  main .leftside ul.courselist li div.tosign > div {
+    padding-right: 80px;
+  }
+  main .leftside ul.courselist li div.tosign > div a {
+    width: 80px;
+  }
+}
+@media (max-width: 640px) {
+  main .leftside ul.courselist li div.tosign {
+    margin-left: 180px;
+  }
+  main .leftside ul.courselist li div.tosign h3 {
+    font-size: 18px;
+  }
+  main .leftside ul.courselist li div.tosign > div {
+    padding-right: 0;
+  }
+  main .leftside ul.courselist li div.tosign > div a {
+    display: none;
+  }
+  main .leftside ul.courselist li div.tosign > div div.price {
+    margin: 5px 0;
+  }
+  main .leftside ul.courselist li div.tosign > div div.price span:first-of-type {
+    margin-right: 20px;
+  }
+  main .leftside ul.courselist li div.tosign > div div.price span:first-of-type em {
+    font-size: 18px;
+  }
+  main .leftside ul.courselist li div.tosign > div p {
+    margin-top: 3px;
+    font-size: 12px;
+  }
+}
+@media (max-width: 480px) {
+  main .leftside ul.courselist li {
+    padding: 10px;
+  }
+  main .leftside ul.courselist li div.tosign {
+    margin-left: 125px;
+  }
+  main .leftside ul.courselist li div.tosign h3 {
+    font-size: 16px;
+  }
+  main .leftside ul.courselist li div.tosign > div {
+    padding-right: 0;
+  }
+  main .leftside ul.courselist li div.tosign > div a {
+    display: none;
+  }
+  main .leftside ul.courselist li div.tosign > div div.price span:first-of-type {
+    margin-right: 20px;
+  }
+  main .leftside ul.courselist li div.tosign > div div.price span:first-of-type em {
+    font-size: 16px;
+  }
+  main .leftside ul.courselist li div.tosign > div p {
+    padding-left: 0;
+    overflow: hidden;
+    display: -webkit-box;
+    word-break: break-all;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  main .leftside ul.courselist li div.tosign > div p span,
+  main .leftside ul.courselist li div.tosign > div p:nth-of-type(2) {
+    display: none;
+  }
+}
