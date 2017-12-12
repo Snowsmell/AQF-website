@@ -1,0 +1,183 @@
+//2017.12.12 薛启伟 内容列表
+@import "../../css/public/list.less"; 
+    
+main{ 
+  padding-bottom: 80px;
+  .leftside{
+    background-color: #fff;
+    padding: 60px;
+    article{
+      padding-bottom:20px;      
+      h2{
+        color:#333;
+        font-size: 30px;
+        text-align: center;
+        .spill(1);
+      }
+      div.information{
+        height: 50px;
+        line-height: 50px;
+        border-bottom: 1px dashed #ddd;
+        position: relative;
+        >div{
+          position: absolute;
+          >span{
+            color: #999;
+          }
+          &:nth-of-type(2){
+            left: 50%;
+            transform: translateX(-50%)
+          }
+          &:last-of-type{
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%)
+          }          
+        }
+      }
+      h3{
+        font-size: 20px;
+        color:#333;
+        margin-top: 35px;
+      }
+      .imgbox{
+        text-align: center;
+        margin-top: 35px;
+        img{
+          max-width: 100%;
+        }
+      }
+      p{
+        text-indent: 25px;
+        font-size: 16px;
+        line-height: 28px;
+        margin-top: 35px;
+        text-align: justify;
+        color: #666;
+      }
+    }
+    .share{
+      padding-bottom: 20px;
+      border-bottom: 1px solid #ddd;      
+      overflow: hidden;
+      >div{
+        float: right;
+      }
+    }
+    .others{
+      p{
+        font-size: 16px;
+        margin-top: 30px;
+        overflow: hidden;
+        span{
+          color:#333;
+          float: left;
+          width: 55px;          
+        }
+        a{
+          color:#666;
+          display: block;
+          margin-left: 55px;
+        }
+        &:hover{
+          a{
+            color:#0078c3;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width:960px) {
+  main{
+    padding-bottom: 60px;
+    .leftside{
+      padding: 50px 40px;
+      article{
+        h2{
+          font-size: 26px;
+        }
+        .imgbox,h3,p{
+          margin-top: 25px;
+        }
+        h3{
+          font-size: 18px;          
+        }
+        p{          
+          line-height: 26px;
+        }
+      }
+    }
+  }
+}
+@media (max-width:640px) {
+  main{
+    padding-bottom: 40px;
+    .leftside{
+      padding: 40px 20px;
+      article{
+        h2{
+          font-size: 22px;
+        }
+        div.information{
+          height: auto;
+          line-height: 30px;
+          overflow: hidden;
+          >div{            
+            position: relative;
+            float: left;
+            &:nth-of-type(1){
+              margin-right: 50px;
+            }
+            &:nth-of-type(2){
+              left: auto;
+              transform: translateX(0)
+            }
+            &:last-of-type{
+              display: none;
+            }
+          }
+        }
+        .imgbox,h3,p{
+          margin-top: 15px;
+        }
+        h3{
+          font-size: 16px;          
+        }
+        p{          
+          line-height: 24px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+@media (max-width:480px) {
+  main{
+    padding-bottom: 30px;
+    .leftside{
+      padding: 30px 15px;
+      article{
+        h2{
+          font-size: 20px;
+        }
+        .imgbox,h3,p{
+          margin-top: 10px;
+        }
+        h3{
+          font-size: 16px;          
+        }
+        p{          
+          line-height: 20px;
+          font-size: 12px;
+        }
+      }
+      .others{
+        p{
+          font-size: 14px;
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+}

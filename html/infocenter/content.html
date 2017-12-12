@@ -9,14 +9,14 @@
   <meta charset="utf-8">
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-  <title>课程中心-课程列表页</title>
+  <title>资讯中心-内容页</title>
   <meta name="keywords" content="">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="">
   <link rel="shortcut icon" href="">
   <link href="../../css/public/common.css" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" href="../../css/coursecenter/coursecenter.css">
+  <link rel="stylesheet" href="../../css/infocenter/content.css">
   <!--[if lt IE 9]>
     <script type="text/javascript" src="../../script/public/html5shiv.js"></script>
     <script type="text/javascript" src="http://gfedu.net/public/script/respond.min.js"></script>
@@ -232,10 +232,10 @@
         <li>
           <a href="/html/index/index.html">首页</a>
         </li>
-        <li>
+        <li class="current">
           <a href="javascript:;">资讯中心</a>
         </li>
-        <li class="expend current">
+        <li class="expend">
           <a href="javascript:;">课程中心</a>
           <ul>
             <li>
@@ -249,7 +249,7 @@
             </li>
           </ul>
         </li>
-        <li class="expend ">
+        <li class="expend">
           <a href="javascript:;">学习中心</a>
         </li>
         <li>
@@ -290,47 +290,19 @@
   </div>
   <!-- AQFnav end -->
 
-  <!-- 广告位  start-->
-  <div class="adv">
-    <div class="container">
-      <a href="javascript:;">
-        <img src="../../images/coursecenter/adv.jpg" alt="一次学个够 看这个">
-      </a>
-    </div>
-  </div>
-
-  <!-- 广告位  end-->
-
-  <!-- 面包屑 start-->
+  <!-- 面包屑 -->
   <div class="brandnav">
     <div class="container">
       您现在的位置>
       <a href="javascript:;">首页</a> >
-      <span>课程中心</span>
+      <span>金程咨询</span>
     </div>
   </div>
-  <!-- 面包屑 end-->
 
-  <!-- 主题部分  start-->
+  <!-- 主题部分 -->
   <main>
     <div class="container">
       <div class="rightside">
-        <div class="getdata">
-          <h2>免费资料索取
-            <span>
-              <i class="icon-gfright">&#xe609;</i>
-            </span>
-          </h2>
-          <div>
-            <p>请填写您的信息</p>
-            <form action="">
-              <input type="text" placeholder="请输入您的姓名">
-              <input type="text" placeholder="请输入您的联系方式">
-              <input type="text" placeholder="请输入您的邮箱">
-              <input type="submit" value="免费获取备考资料">
-            </form>
-          </div>
-        </div>
         <div class="recommend">
           <h2>推荐课程
             <span>
@@ -382,118 +354,84 @@
             </li>
           </ul>
         </div>
-      </div>
-
-      <div class="leftside">
-        <div class="slogen">
-          <h2>
-            <img src="../../images/coursecenter/coursecenter.jpg" alt="课程中心">
-            <em>课程中心</em>
-            <span>\ 完整课程体系，总有一款适合你</span>
-          </h2>
+        <div class="erweima">
+          <img src="../../images/infocenter/wx.jpg" alt="">
+          <div>
+            <p>关注微信量化研究所</p>
+            <p>了解更多量化咨询</p>
+          </div>
         </div>
-        <ul class="courselist">
-          <li>
-            <a href="javascript:;"></a>
-            <div class="imgbox">
-              <img src="../../images/infocenter/news.jpg" alt="假装我是学习资料">
+      </div>
+      <div class="leftside">
+        <article>
+          <h2>CFA推出新课程</h2>
+          <div class="information">
+            <div>发表时间：
+              <span>2015-07-02 19:00</span>
             </div>
-            <div class="tosign">
-              <h3>量化交易策略长久更新班</h3>
-              <div>
-                <a href="javascript:;">我要报名</a>
-                <div class="price">
-                  <span>￥
-                    <em>10680</em>
-                  </span>
-                  <span>原价：
-                    <em>20000</em>
-                  </span>
-                </div>
-                <p>
-                  <span>课程特色：</span> AQF实训+策略大讲堂超值套餐项目 </p>
-                <p>
-                  <span>适合人群：</span> 适合编程经验较少，但有计划深入学习量化投资的学员</p>
+            <div>编辑：
+              <span>张锦梁、皮乾亮</span>
+            </div>
+            <div class="sharepage">
+              <div class="jiathis_style">
+                <span class="jiathis_txt">告诉小伙伴：</span>
+                <a class="jiathis_button_weixin"></a>
+                <a class="jiathis_button_tsina"></a>
+                <a class="jiathis_button_tqq"></a>
+                <a class="jiathis_button_qzone"></a>
+                <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
               </div>
+              <script type="text/javascript">
+                var _title = document.querySelector(".leftside>.article h2").innerHTML
+                var _summary = document.querySelector(".leftside>.article .firstpra").innerText
+                var jiathis_config = {
+                  url: window.location.href,
+                  summary: _summary,
+                  title: _title,
+                  shortUrl: false,
+                  hideMore: true
+                }
+              </script>
+              <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
             </div>
-          </li>
-          <li>
-              <a href="javascript:;"></a>
-            <div class="imgbox">
-              <img src="../../images/infocenter/news.jpg" alt="假装我是学习资料">
-            </div>
-            <div class="tosign">
-              <h3>量化交易策略大讲堂</h3>
-              <div>
-                <a href="javascript:;">我要报名</a>
-                <div class="price">
-                  <span>￥
-                    <em>4680</em>
-                  </span>
-                  <span>原价：
-                    <em>20000</em>
-                  </span>
-                </div>
-                <p>
-                  <span>课程特色：</span> 面向实务，进阶提升 </p>
-                <p>
-                  <span>适合人群：</span> 适合有一定编程基础，希望了解更多策略开发实务的学员</p>
-              </div>
-            </div>
-          </li>
-          <li>
-              <a href="javascript:;"></a>
-            <div class="imgbox">
-              <img src="../../images/infocenter/news.jpg" alt="假装我是学习资料">
-            </div>
-            <div class="tosign">
-              <h3>量化金融分析师AQF实训项目</h3>
-              <div>
-                <a href="javascript:;">我要报名</a>
-                <div class="price">
-                  <span>￥
-                    <em>6880</em>
-                  </span>
-                  <span>原价：
-                    <em>20000</em>
-                  </span>
-                </div>
-                <p>
-                  <span>课程特色：</span> 0基础入门量化投资，对接AQF量化分析师证书考试 </p>
-                <p>
-                  <span>适合人群：</span> 适合没有编程基础，想要系统学习量化交易知识技能的学员</p>
-              </div>
-            </div>
-          </li>
-          <li>
-            <a href="javascript:;"></a>
-            <div class="imgbox">
-              <img src="../../images/infocenter/news.jpg" alt="假装我是学习资料">
-            </div>
-            <div class="tosign">
-              <h3>量化投资入门特惠班</h3>
-              <div>
-                <a href="javascript:;">我要报名</a>
-                <div class="price">
-                  <span>￥
-                    <em>899</em>
-                  </span>
-                  <span>原价：
-                    <em>20000</em>
-                  </span>
-                </div>
-                <p>
-                  <span>课程特色：</span> 低成本体验量化投资课程，无缝衔接AQF实训课程 </p>
-                <p>
-                  <span>适合人群：</span> 适合对量化投资感兴趣，想要有进一步了解的学员</p>
-              </div>
-            </div>
-          </li>
-        </ul>
+          </div>
+          <p>
+            CFA考试考纲一年更新一次，2015年11月CFA考纲已于2015年1月份公布。金程教育温馨提示：备考需趁早，特别是对于初次接触FRM考试的考生，提前准备11月份考试，需从此刻开始。夯实金融基础、数学及英语基础是顺利备考的前提，4月18日CFA高效备考经验助您提早半年规划，助您理清备考思路，事半功倍通过FRM考试。
+          </p>
+          <p>
+            梳理FRM考试所涉及的知识点，形成“FRM考试知识脉络图”，迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建FRM考试知识结构体系。由点到线，由线到面的形成FRM识体系网络。
+          </p>
+          <h3>激发学习热情，学习备考技巧。</h3>
+          <p>
+            为帮助更多CFA考生快速掌握考试重难点和高效备考技巧，金程教育特邀CFA首席培训师王东现场解密CFA备考经验，解答CFA考生相关疑问。特别是对于初次接触CFA考试的考生，无从掌握CFA出题方向，网上资料混杂，主次不分，很难一次通过考试。
+          </p>
+          <div class="imgbox">
+              <img src="../../images/infocenter/example.jpg" alt="">
+          </div>
+          <p>
+            中国的CFA会员对本地金融业就业市场十分乐观，60%的受访者认为2015年的全球金融市场状况会好转，行业的就业机会更多，比例较2014年48%有所提升，反映他们对就业前景颇有信心。比中国更乐观的是印度，高达77%的CFA会员认为当地的相关就业机会将会增长。对本地就业市场比较乐观的还包括英国37%、美国33%、中国香港32%、新加坡30%。
+          </p>
+          <p>
+            调查显示，总体上而言，从2014年到2015年，整个金融市场的诚信氛围是变好的。中国乃至于全球，各个国家都加强了金融行业的监管。
+          </p>
+        </article>
+        <div class="share">
+          <div class="jiathis_style">
+            <span class="jiathis_txt">告诉小伙伴：</span>
+            <a class="jiathis_button_weixin"></a>
+            <a class="jiathis_button_tsina"></a>
+            <a class="jiathis_button_tqq"></a>
+            <a class="jiathis_button_qzone"></a>
+            <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+          </div>
+        </div>
+        <div class="others">
+          <p><span>上一篇:</span><a href="javascript:;">沙特用五星级饭店囚禁被捕王子 多人选择舍财保命</a></p>
+          <p><span>下一篇:</span><a href="javascript:;">美NBC著名男主持被解雇 特朗普揶揄:高层何时被炒</a></p>
+        </div>
       </div>
     </div>
   </main>
-  <!-- 主题部分  end-->
 
   <!-- footer start-->
   <footer>

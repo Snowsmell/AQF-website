@@ -130,6 +130,19 @@ main .rightside div.questions ul li a i {
 main .rightside div.questions ul li a:hover {
   color: #0078c3;
 }
+main .rightside div.erweima {
+  padding: 20px;
+  overflow: hidden;
+}
+main .rightside div.erweima img {
+  float: left;
+  width: 100px;
+  height: 100px;
+}
+main .rightside div.erweima div {
+  margin-left: 110px;
+  padding-top: 30px;
+}
 main .leftside {
   margin-right: 310px;
   /*头标*/
@@ -396,6 +409,9 @@ main .leftside div.pagenav a.nextpage:hover:before {
 .adv img {
   max-width: 100%;
 }
+main {
+  padding-bottom: 80px;
+}
 main .leftside div.slogen {
   background-color: #d5dde1;
   background-image: -moz-linear-gradient(0deg, #d5dde1 0%, #e8eef2 100%);
@@ -488,6 +504,9 @@ main .leftside ul.courselist li:hover div.tosign > div a {
   }
 }
 @media (max-width: 960px) {
+  main {
+    padding-bottom: 30px;
+  }
   main .leftside ul.courselist li {
     padding: 20px;
   }
@@ -499,6 +518,9 @@ main .leftside ul.courselist li:hover div.tosign > div a {
   }
 }
 @media (max-width: 640px) {
+  main {
+    padding-bottom: 20px;
+  }
   main .leftside ul.courselist li div.tosign {
     margin-left: 180px;
   }

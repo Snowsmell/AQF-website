@@ -130,6 +130,19 @@ main .rightside div.questions ul li a i {
 main .rightside div.questions ul li a:hover {
   color: #0078c3;
 }
+main .rightside div.erweima {
+  padding: 20px;
+  overflow: hidden;
+}
+main .rightside div.erweima img {
+  float: left;
+  width: 100px;
+  height: 100px;
+}
+main .rightside div.erweima div {
+  margin-left: 110px;
+  padding-top: 30px;
+}
 main .leftside {
   margin-right: 310px;
   /*头标*/
