@@ -42,7 +42,6 @@ $(function () {
     lis[center].style.transform = "translateX(0px)";
     lis[right].style.transform = "translateX(" + (imgWidth) + "px)";
 
-
     //自动轮播
     timer = setInterval(showNext, setTime);
 

@@ -97,7 +97,7 @@ main {
                     text-align: justify;
                     margin-bottom: 35px;
                 }
-                ul {
+                >ul {
                     padding: 15px 0;
                     position: relative;
                     li {
@@ -142,13 +142,95 @@ main {
                     margin-top: 50px;
                     box-sizing: border-box;
                     border: 1px solid #d2e9f7;
-                    height: 200px;
+                    padding-bottom: 20px;
                     h3 {
                         text-align: center;
                         color: #0078c3;
                         font-size: 24px;
                         padding: 13px 0;
                         border-bottom: 1px solid #d2e9f7;
+                    }
+                    div.text{
+                        position: relative;
+                        ul{
+                            width: 100%;                            
+                            li{
+                                display: none;
+                                width: 100%;                                
+                                p{
+                                    font-size: 16px;
+                                    max-width: 400px;
+                                    margin: 0 auto;
+                                    position: relative;
+                                    box-sizing: border-box;
+                                    padding-left: 70px;
+                                    span{
+                                        position: absolute;
+                                        width: 60px;
+                                        left: 0;
+                                        top: 0;
+                                        font-size: 18px;
+                                        color:#333;
+                                    }
+                                }                    
+                            }
+                            li.current{
+                                display: block;
+                            }
+                        }
+                        >span{
+                            color:#0078c3;
+                            font-family: "宋体";
+                            font-weight: 600;
+                            line-height: 35px;
+                            position: absolute;
+                            font-size: 18px;
+                            text-align: center;
+                            width: 22px;
+                            height: 35px;
+                            background-color: #ebf3f8;
+                            cursor: pointer;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            -moz-transform: translateY(-50%);
+                            -webkit-transform: translateY(-50%);
+                        }
+                        span.next{right: 0}
+                    }
+                    div.dian{
+                        margin-top: 20px;
+                        .cf();
+                        ul{
+                            .cf();
+                            width: 100%;
+                            height: 4px;
+                            border-bottom: 2px dashed #d2e9f7;
+                            max-width: 789px;
+                            margin:auto;
+                        }
+                        li{
+                            .cf();
+                            width: 10%;
+                            float: left;
+                            text-align: center;
+                            color: #d2e9f7;
+                            font-size: 15px;
+                            em{
+                                display: block;
+                                width: 15px;
+                                height: 15px;
+                                box-sizing: border-box;
+                                border-radius: 50%;
+                                cursor: pointer;
+                                background: #d2e9f7;
+                                margin: -3px auto 15px;
+                            }
+                            &.current em,em:hover{
+                                background: #0186db;
+                            }
+                            &:hover,&.current{color: #0186db;}
+                
+                        }
                     }
                 }
             }
@@ -289,10 +371,154 @@ main {
 @media(max-width:960px) {
     main {
         ul.leftnav {
-            display: none;
+            width: 100%;
+            overflow: hidden;
+            li {
+                float: left;
+                padding: 0;
+                box-sizing: border-box;
+                height: 40px;
+                line-height: 40px;
+                width: 25%;
+                text-align: center;
+                border-left: none;
+                border-bottom: 2px solid transparent;
+                span {
+                    display: none;
+                }
+            }
+            li.current{
+                border-bottom: 2px solid #0078c3;
+            }
         }
         .content {
+            margin-top: 50px;
             margin-left: 0;
+            padding: 20px;
+        }
+    }
+}
+
+@media(max-width:640px) {
+    .container {
+        padding: 0;
+    }
+    main {
+        ul.leftnav {
+            li {
+                font-size: 14px;
+            }
+        }
+        .content {
+            margin-top: 50px;
+            h2 {
+                padding-bottom: 15px;
+                margin-bottom: 25px;
+            }
+            article {
+                h3{
+                    margin-bottom: 20px;
+                }
+                &:nth-of-type(1) {
+                    p {
+                        margin-bottom: 20px
+                    }
+                    .timeline{
+                        display: none;
+                    }
+                }
+                &:nth-of-type(2) {
+                    section {
+                        text-align: center;
+                        padding: 15px 0;
+                        img {
+                            float: none;
+                            width: 120px;
+                            height: 120px;
+                        }
+                        div {
+                            margin-left: 0;
+                            text-align: justify;
+                            h3 {
+                                text-align: center;
+                            }
+                            ul {
+                                li {
+                                    p {
+                                        margin-left: 5em
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &:nth-of-type(3){
+                    .connect{
+                        div{
+                            margin-bottom: 10px;
+                        }
+                        div:nth-of-type(-n+4) {
+                            width: 100%;
+                        }
+                    }
+                    section{
+                        text-align: center;
+                        padding: 20px 0;
+                        img{
+                            float: none;
+                            max-width: 100%;
+                        }
+                        ul{
+                            margin-left: 0;
+                            margin-top: 5px;
+                            text-align: justify;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:480px) {
+    main {
+        .content {
+            margin-top: 50px;
+            h2 {
+                padding-bottom: 15px;
+                margin-bottom: 20px;
+            }
+            article {
+                &:nth-of-type(1) {
+                    p {
+                        margin-bottom: 15px
+                    }
+                    ul {
+                        &:before {
+                            display: none;
+                        }
+                        li {
+                            margin-bottom: 20px;
+                            img {
+                                display: none;
+                            }
+                            div {
+                                margin-left: 0;
+                                h4 {
+                                    margin-bottom: 10px
+                                }
+                            }
+                        }
+                    }
+                }
+                &:nth-of-type(4){
+                    section{
+                        width: 100%;
+                        margin: 0 0 20px 0;
+                        height: auto;
+                    }
+                }
+            }
         }
     }
 }
