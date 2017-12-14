@@ -2,7 +2,12 @@
   max-width: 1200px;
   position: relative;
   margin: 0 auto;
-  overflow: hidden;
+  *zoom: 1;
+}
+.container:after {
+  content: " ";
+  clear: both;
+  display: table;
 }
 body {
   background-color: #f5f6f9;

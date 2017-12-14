@@ -269,7 +269,23 @@ button {
 .AQFnav ul.first > li.expend ul li:hover {
   background-color: #f5f6f7;
 }
+.AQFnav ul.first > li.expend ul:before {
+  content: '';
+  width: 100%;
+  position: absolute;
+  height: 2px;
+  top: -3px;
+  left: 0;
+  background-color: #0078c3;
+  display: none;
+}
+.AQFnav ul.first > li.expend:hover {
+  border-bottom: 2px solid transparent;
+}
 .AQFnav ul.first > li.expend:hover ul {
+  display: block;
+}
+.AQFnav ul.first > li.expend:hover ul:before {
   display: block;
 }
 .AQFnav .date {

@@ -1,7 +1,7 @@
 @import "../../css/public/headfooter.css";
 @import "../../css/public/variable.less";
 @a: #0186db;
-@bg: #f4f6f8;
+@bg: #f4f6f8; 
 
 /*导入字体*/
 
@@ -197,10 +197,24 @@ button {
                         background-color: #f5f6f7;
                     }
                 }
+                &:before{
+                    content: '';
+                    width: 100%;
+                    position: absolute;
+                    height: 2px;
+                    top: -3px;
+                    left: 0;
+                    background-color: #0078c3;
+                    display: none;
+                }
             }
             &:hover {
+                border-bottom: 2px solid transparent;
                 ul {
-                    display: block;
+                    display: block;                    
+                    &:before{
+                        display: block;
+                    }
                 }
             }
         }
