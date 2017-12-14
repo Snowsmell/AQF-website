@@ -10,7 +10,6 @@ $(function(){
                          .siblings('h2').text($(this).text().slice(0,4))                         
   })
 
-
   //about timeline
   $('.timeline .text .next').on('click',function(){
     var now = $(this).siblings('ul').find('li.current').index();

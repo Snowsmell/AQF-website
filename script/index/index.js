@@ -1,5 +1,7 @@
 $(function () {
-  //banner展示轮播图
+  var isIE9 = navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion.split(";")[1].replace(/[ ]/g, "") == "MSIE9.0"
+  
+  //banner展示轮播图--非ie9
   function banner(container,setTime) {
     //获取元素
     var carousel = document.querySelector(container);
@@ -10,7 +12,7 @@ $(function () {
     var timer2 = null;
     var imgWidth = $(window).width();
     var imgHeight = lis[0].offsetHeight;
-    console.log(lis[0],imgWidth);
+    // console.log(lis[0],imgWidth);
     function setHeight() {
       //设置盒子高度
       //循环创建小圆点，动态加入
@@ -32,8 +34,6 @@ $(function () {
         window.location.reload();
       }, 300)
     })
-
-
     //初始化位置
     var left = lis.length - 1;
     var center = 0;
@@ -41,10 +41,8 @@ $(function () {
     lis[left].style.transform = "translateX(" + (-imgWidth) + "px)";
     lis[center].style.transform = "translateX(0px)";
     lis[right].style.transform = "translateX(" + (imgWidth) + "px)";
-
     //自动轮播
     timer = setInterval(showNext, setTime);
-
     //移动端滑动事件
     var startX = 0;
     var moveX = 0;
@@ -60,10 +58,6 @@ $(function () {
       setPosition(moveX);
     });
     carouselWrap.addEventListener('touchend', function (e) {
-      // console.log('经过的时间');
-      // console.log(Date.now() - startTime);
-      // console.log('移动的距离');
-      // console.log(moveX);
       if (Math.abs(moveX) > imgWidth / 3 || (Math.abs(moveX) > 50 && (Date.now() - startTime) < 100)) {
         if (moveX > 0) {
           showPrev()
@@ -146,15 +140,24 @@ $(function () {
       olLis[center].classList.add('active')
     }
   }
-  banner('.banner-carousel',7000)  
+
+  //banner轮播--ie9专用
+  
+
+  //看是否是ie9，切换轮播方式
+  if(!isIE9){
+    banner('.banner-carousel',7000)  
+  }else{
+
+  }
+
+
   //关于切换
   $('.infolist p span').on('click',function(){
     $(this).addClass('current').siblings('span').removeClass('current')
     $('.infolist-content ul').eq($(this).index()).addClass('current')
                               .siblings('ul').removeClass('current')
   })
-
-
   //关于研发中心老师的介绍展开
   $('.dev-center .expend-text').on('click',function(){
     $(this).siblings('span').toggle();
