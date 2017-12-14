@@ -1,8 +1,8 @@
 $(function () {
   var isIE9 = navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion.split(";")[1].replace(/[ ]/g, "") == "MSIE9.0"
-  
+
   //banner展示轮播图--非ie9
-  function banner(container,setTime) {
+  function banner(container, setTime) {
     //获取元素
     var carousel = document.querySelector(container);
     var carouselWrap = carousel.querySelector('ul');
@@ -142,37 +142,127 @@ $(function () {
   }
 
   //banner轮播--ie9专用
-  
+  function iebanner(container, setTime) {
+    var box = document.querySelector(container);
+    var ul = box.querySelector('ul');
+    var lis = ul.querySelectorAll('li');
+    var imgW = lis[0].offsetWidth;
+    var ol = box.querySelector('ol')
+    var ollis = '';
+    var index = 0;
+    var timer = null;
+    $(lis).each(function (i, v) {
+      v.style.width = imgW + 'px'
+      if (i == 0) {
+        ollis += '<li class="active"></li>'
+      } else {
+        ollis += '<li></li>'
+      }
+    })
+    ol.innerHTML = ollis
+    var first = lis[0].cloneNode('true')
+    ul.appendChild(first)
+    ul.style.width = lis[0].offsetWidth * (lis.length + 1) + 'px'
+    //小圆点事件
+    $(ol).find('li').on('mouseenter', function () {
+      $(this).addClass('active').siblings().removeClass('active')
+      var end = -$(this).index() * imgW
+      index = $(this).index()
+      animate(ul, end)
+    })
 
-  //看是否是ie9，切换轮播方式
-  if(!isIE9){
-    banner('.banner-carousel',7000)  
-  }else{
+    //next事件
+    function next() {
+      if (index == lis.length) {
+        index = 0
+        ul.style.left = 0;
+      }
+      index++
+      var end = -index * imgW
+      animate(ul, end)
+      var pic = index;
+      if (pic == lis.length) {
+        pic = 0
+      }
+      $('ol li').eq(pic).addClass('active').siblings().removeClass('active')
 
+    }
+    //prev事件
+    function prev() {
+      if (index == 0) {
+        index = lis.length
+        ul.style.left = -imgW * index + 'px';
+      }
+      index--
+      var end = -index * imgW
+      animate(ul, end)
+      $('ol li').eq(index).addClass('active').siblings().removeClass('active')
+    }
+    //点击事件
+    $(box).find('.env-prev').on('click',function(){
+      prev()
+    })
+    $(box).find('.env-next').on('click',function(){
+      next()
+    })    
+    //轮播
+    timer = setInterval(next,setTime)
+    $(box).on('mouseenter',function(){
+      console.log('jinru')
+      clearInterval(timer)
+    })
+    $(box).on('mouseleave',function(){
+      timer = setInterval(next,setTime)
+    })
   }
 
+  //一个缓动函数--ie9用
+  function animate(obj, target) {
+    clearInterval(obj.timer);
+    obj.timer = setInterval(function () {
+      var leader = obj.offsetLeft;
+      var step = 30;
+      step = leader < target ? step : -step;
+      if (Math.abs(target - leader) >= Math.abs(step)) {
+        leader = leader + step;
+        obj.style.left = leader + "px";
+      } else {
+        obj.style.left = target + "px";
+        clearInterval(obj.timer);
+      }
+    }, 15);
+  }
 
+  //看是否是ie9，切换轮播方式
+  if (!isIE9) {
+    banner('.banner-carousel', 7000)
+  } else {
+    $('.banner-carousel ul li').each(function (i, v) {
+      $(v).addClass('ie9')
+    })
+    iebanner('.banner-carousel', 5000)
+  }
   //关于切换
-  $('.infolist p span').on('click',function(){
+  $('.infolist p span').on('click', function () {
     $(this).addClass('current').siblings('span').removeClass('current')
     $('.infolist-content ul').eq($(this).index()).addClass('current')
-                              .siblings('ul').removeClass('current')
+      .siblings('ul').removeClass('current')
   })
   //关于研发中心老师的介绍展开
-  $('.dev-center .expend-text').on('click',function(){
+  $('.dev-center .expend-text').on('click', function () {
     $(this).siblings('span').toggle();
     $(this).siblings('p').toggleClass('expend')
-    if($(this).text()=='展开全部'){
+    if ($(this).text() == '展开全部') {
       $(this).text('收起')
-    }else{
+    } else {
       $(this).text('展开全部')
     }
   })
 
   //研发中心移动端
-  if($(window).width()<=640){
+  if ($(window).width() <= 640) {
     $('.dev-center').removeClass('pc').addClass('mobile')
-    banner('.dev-center.mobile .container',10000)
+    banner('.dev-center.mobile .container', 10000)
   }
 
 })
