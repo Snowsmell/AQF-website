@@ -238,6 +238,7 @@ main {
                         font-size: 20px;
                         max-height: 30px;
                         color: #333;
+                        transition: all .5s;
                         .spill(1);
                     }
                     p {
@@ -290,6 +291,13 @@ main {
                     top: 0;
                     left: 0;
                     z-index: 666;
+                }
+                &:hover{
+                    .content{
+                        h3{
+                            color:#0078c3;
+                        }
+                    }
                 }
             }
         } //分页

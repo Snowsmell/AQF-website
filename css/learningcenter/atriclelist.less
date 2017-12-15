@@ -1,7 +1,7 @@
 //2017.12.11 薛启伟 文章列表
 @import "../../css/public/list.less";
 main {  
-    .leftside { 
+    .leftside {  
         div.slogen {
             background-color: #ece1da;
             background-image: -moz-linear-gradient( 0deg, #ece1da 0%, #f8ede7 100%);
@@ -18,12 +18,16 @@ main {
         ul.articlelist{
             li{
                 .content{
+                    p.text{
+                        margin-top: 8px;
+                    }
                     p.author{
                         overflow: hidden;
                         width: 100%;
                         position: relative;                        
                         color: #999;
                         bottom: inherit;
+                        margin-top: 12px;
                         >span:first-of-type{
                             float: left;
                             img{

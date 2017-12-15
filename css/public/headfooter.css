@@ -3744,7 +3744,7 @@ html.mm-opening .mm-slideout {
 }
 @media (min-width: 480px) {
   .mainheader {
-    padding: 30px 25px;
+    padding: 24px 25px;
   }
   .mainheader .protitle {
     width: 404px;
@@ -3786,7 +3786,7 @@ html.mm-opening .mm-slideout {
 }
 @media (min-width: 768px) {
   .mainheader {
-    padding: 40px 25px;
+    padding: 24px 25px;
   }
   .mainheader .protitle {
     float: left;

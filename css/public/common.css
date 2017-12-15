@@ -201,7 +201,7 @@ button {
   position: relative;
   height: 50px;
   line-height: 50px;
-  margin-right: 2.5%;
+  margin-right: 2.75%;
   box-sizing: border-box;
   border-bottom: 2px solid transparent;
 }
@@ -304,6 +304,14 @@ button {
 .AQFnav .date span {
   color: #0078c3;
   font-size: 16px;
+}
+@media (max-width: 1200px) {
+  .AQFnav ul.first {
+    padding: 0 10px;
+  }
+  .AQFnav ul.first > li {
+    margin-right: 2.5%;
+  }
 }
 @media (max-width: 960px) {
   .AQFnav ul.first {

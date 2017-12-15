@@ -198,6 +198,7 @@ main .leftside ul li .content h3 {
   font-size: 20px;
   max-height: 30px;
   color: #333;
+  transition: all .5s;
   overflow: hidden;
   display: -webkit-box;
   word-break: break-all;
@@ -257,6 +258,9 @@ main .leftside ul li > a {
   top: 0;
   left: 0;
   z-index: 666;
+}
+main .leftside ul li:hover .content h3 {
+  color: #0078c3;
 }
 main .leftside div.pagenav {
   margin: 35px 0;
@@ -422,12 +426,16 @@ main .leftside div.slogen img {
 main .leftside div.slogen h2 {
   padding-left: 60px;
 }
+main .leftside ul.articlelist li .content p.text {
+  margin-top: 8px;
+}
 main .leftside ul.articlelist li .content p.author {
   overflow: hidden;
   width: 100%;
   position: relative;
   color: #999;
   bottom: inherit;
+  margin-top: 12px;
 }
 main .leftside ul.articlelist li .content p.author > span:first-of-type {
   float: left;

@@ -1,6 +1,6 @@
 @import "../../css/public/headfooter.css";
 @import "../../css/public/variable.less";
-@a: #0186db;
+@a: #0186db; 
 @bg: #f4f6f8; 
 
 /*导入字体*/
@@ -126,7 +126,7 @@ button {
             position: relative;
             height: 50px;
             line-height: 50px;
-            margin-right: 2.5%;
+            margin-right: 2.75%;
             .bsz();
             border-bottom: 2px solid transparent;
             >a {
@@ -237,11 +237,21 @@ button {
         }
     }
 }
-
+@media(max-width:1200px){
+    .AQFnav {
+        ul.first {
+            padding: 0 10px;
+            >li{
+                margin-right: 2.5%;
+            }
+        }
+    }
+}
 @media(max-width:960px) {
     .AQFnav {
         ul.first {
             padding: 0 10px;
+
         }
         .date {
             display: none;

@@ -115,6 +115,7 @@ main .rightside div.questions ul li a {
   display: block;
   height: 50px;
   line-height: 50px;
+  max-height: 50px;
   box-sizing: border-box;
   border-bottom: 1px solid #eee;
   color: #666;
@@ -195,6 +196,7 @@ main .leftside ul li .content {
 }
 main .leftside ul li .content h3 {
   font-size: 20px;
+  max-height: 30px;
   color: #333;
   overflow: hidden;
   display: -webkit-box;
@@ -215,6 +217,7 @@ main .leftside ul li .content p:nth-of-type(2) {
 main .leftside ul li .content p.text {
   color: #666;
   line-height: 26px;
+  max-height: 78px;
   text-align: justify;
   overflow: hidden;
   display: -webkit-box;
@@ -254,6 +257,9 @@ main .leftside ul li > a {
   top: 0;
   left: 0;
   z-index: 666;
+}
+main .leftside ul li:hover .content h3 {
+  color: #0078c3;
 }
 main .leftside div.pagenav {
   margin: 35px 0;
@@ -352,6 +358,7 @@ main .leftside div.pagenav a.nextpage:hover:before {
   }
   main .leftside ul li .content p.text {
     line-height: 20px;
+    max-height: 60px !important;
   }
 }
 @media (max-width: 480px) {
@@ -383,6 +390,7 @@ main .leftside div.pagenav a.nextpage:hover:before {
   }
   main .leftside ul li .content h3 {
     font-size: 14px;
+    max-height: 21px !important;
   }
   main .leftside ul li .content p.time span {
     padding: 0 2px;
@@ -396,6 +404,7 @@ main .leftside div.pagenav a.nextpage:hover:before {
   main .leftside ul li .content p.text {
     letter-spacing: .1px;
     line-height: 14px;
+    max-height: 42px !important;
   }
 }
 @media (max-width: 360px) {

@@ -93,6 +93,7 @@ h2 p {
   min-height: 60px;
   width: 33.3%;
   border-right: 1px solid #ddd;
+  position: relative;
 }
 .introduction .quicknav > div > .imgbox {
   float: left;
@@ -107,7 +108,7 @@ h2 p {
   margin-left: 64px;
   height: 60px;
   line-height: 30px;
-  padding-right: 20%;
+  padding-right: 25%;
 }
 .introduction .quicknav > div > div:nth-of-type(2) p {
   color: #333;
@@ -127,6 +128,14 @@ h2 p {
   word-break: break-all;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
+}
+.introduction .quicknav > div > a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 666;
+  left: 0;
+  top: 0;
 }
 .introduction .quicknav > div:last-of-type {
   border-right: none;
@@ -171,6 +180,8 @@ h2 p {
 }
 .introduction .infolist div ul {
   width: 1200px;
+  box-sizing: border-box;
+  padding: 0 1px;
   display: none;
   *zoom: 1;
 }
@@ -238,7 +249,7 @@ h2 p {
 }
 .introduction .infolist div ul li:hover {
   border: 1px solid transparent;
-  box-shadow: 0 0 3px 2px #ddd;
+  box-shadow: 0 0 3px 3px #ddd;
 }
 .introduction .infolist div ul li:hover > div h3 {
   color: #0f73b1;
@@ -502,6 +513,7 @@ h2 p {
   width: 90%;
   margin: 0 auto;
   line-height: 26px;
+  max-height: 130px;
   opacity: .8;
   overflow: hidden;
   display: -webkit-box;
@@ -515,6 +527,7 @@ h2 p {
   word-break: break-all;
   -webkit-line-clamp: 20;
   -webkit-box-orient: vertical;
+  max-height: 260px !important;
 }
 .dev-center ul li a {
   display: block;

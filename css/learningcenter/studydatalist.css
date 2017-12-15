@@ -198,6 +198,7 @@ main .leftside ul li .content h3 {
   font-size: 20px;
   max-height: 30px;
   color: #333;
+  transition: all .5s;
   overflow: hidden;
   display: -webkit-box;
   word-break: break-all;
@@ -257,6 +258,9 @@ main .leftside ul li > a {
   top: 0;
   left: 0;
   z-index: 666;
+}
+main .leftside ul li:hover .content h3 {
+  color: #0078c3;
 }
 main .leftside div.pagenav {
   margin: 35px 0;
