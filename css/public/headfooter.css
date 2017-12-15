@@ -4100,6 +4100,7 @@ body {
   display: inline-block;
   display: none;
   font-size: 14px;
+  position: relative;
 }
 .topheader nav a i {
   display: none;
@@ -4111,6 +4112,7 @@ body {
   overflow: hidden;
   position: absolute;
   bottom: 0;
+  left: 0;
   margin-left: 20px;
 }
 .topheader nav a em {

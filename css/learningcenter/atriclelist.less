@@ -1,6 +1,6 @@
 //2017.12.11 薛启伟 文章列表
 @import "../../css/public/list.less";
-main { 
+main {  
     .leftside { 
         div.slogen {
             background-color: #ece1da;
@@ -42,3 +42,29 @@ main {
         }
     } 
 } 
+
+@media(max-width:480px){
+    main{
+        .leftside{
+            ul.articlelist{
+                li{
+                    .content{
+                        p.author{
+                            >span:first-of-type{
+                                line-height: 20px;
+                                margin-right: 10px;
+                                img{
+                                    display: none;
+                                }
+                            }
+                            >span:last-of-type{
+                                float: left;
+                                line-height: 20px;
+                            }                             
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

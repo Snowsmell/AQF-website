@@ -1,8 +1,8 @@
-.spill(@n) {
-    overflow: hidden;
-    display: -webkit-box;
+.spill(@n){
+    overflow:hidden;
+    display:-webkit-box;
     word-break: break-all;
-    -webkit-line-clamp: @n;
+    -webkit-line-clamp:@n;
     -webkit-box-orient: vertical;
 }
 
@@ -46,8 +46,8 @@ h2 {
                     width: 100%;
                 }
             }
-            li.ie9{
-                float: left;                
+            li.ie9 {
+                float: left;
                 position: relative;
                 left: auto;
                 top: auto;
@@ -115,22 +115,30 @@ h2 {
             min-height: 60px;
             width: 33.3%;
             border-right: 1px solid #ddd;
-            >img {
-                margin-top: -50px;
+            >.imgbox {
+                float: left;
+                width: 64px;
+                height: 60px;
+                margin-left: 20%;
+                img {
+                    max-width: 100%
+                }
             }
-            >div {
-                display: inline-block;
+            >div:nth-of-type(2) {
+                margin-left: 64px;
                 height: 60px;
                 line-height: 30px;
+                padding-right: 20%;
                 p {
+                    color: #333;
+                    font-size: 20px;
+                    font-weight: 600;
+                    .spill(1)
+                }
+                div {
                     color: #999;
                     font-size: 14px;
                     .spill(1);
-                    &:nth-of-type(1) {
-                        color: #333;
-                        font-size: 20px;
-                        font-weight: 600;
-                    }
                 }
             }
             &:last-of-type {
@@ -198,7 +206,8 @@ h2 {
                             color: #333;
                             font-size: 16px;
                             line-height: 26px;
-                            transition: all .5s;
+                            transition: all .5s;                            
+                            max-height: 52px;
                             .spill(2);
                         }
                         p {
@@ -207,6 +216,7 @@ h2 {
                             position: absolute;
                             padding: 0 15px;
                             line-height: 24px;
+                            max-height: 48px;
                             color: #999;
                             left: 0;
                             bottom: 20px;
@@ -245,15 +255,18 @@ h2 {
             padding: 0 10px;
         }
     }
-    @media(max-width:640px) {
+    @media(max-width:768px) {
         .quicknav {
             padding: 20px 0;
             >div {
-                img {
-                    margin-top: 0;
+                .imgbox {
+                    float: none;
+                    margin: 5px auto;
                 }
-                >div {
-                    display: block;
+                >div:nth-of-type(2) {
+                    margin-left: 0;
+                    text-align: center;
+                    padding-right: 0;
                     p {
                         .spill(2)
                     }
@@ -290,7 +303,7 @@ h2 {
                     padding-right: 20px;
                     font-size: 26px;
                     line-height: 30px;
-                    height: 60px;
+                    max-height: 60px;
                     .spill(2);
                     a {
                         color: #333;
@@ -301,6 +314,7 @@ h2 {
                     color: #666;
                     font-size: 14px;
                     line-height: 28px;
+                    max-height: 56px;
                     margin: 10px 0 25px;
                     .spill(2);
                 }
@@ -443,6 +457,7 @@ h2 {
                 font-size: 14px;
                 color: #999;
                 line-height: 22px;
+                max-height: 66px;
                 .spill(3);
             }
             &:last-of-type {
@@ -506,25 +521,25 @@ h2 {
         }
     }
     ol {
-      width: 100%;
-      height: 8px;
-      position: absolute;
-      left: 0;
-      bottom: -15px;
-      text-align: center;
-      font-size: 0;
-      >li {
-          display: inline-block;
-          width: 8px;
-          height: 8px;
-          border-radius: 4px;
-          background-color: #7a8187;
-          margin-right: 10px;
-      }
-      >li.active {
-          background-color: #fff;
-      }
-  }
+        width: 100%;
+        height: 8px;
+        position: absolute;
+        left: 0;
+        bottom: -15px;
+        text-align: center;
+        font-size: 0;
+        >li {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 4px;
+            background-color: #7a8187;
+            margin-right: 10px;
+        }
+        >li.active {
+            background-color: #fff;
+        }
+    }
 }
 
 .dev-center.pc {
@@ -696,6 +711,7 @@ h2 {
                     }
                     p {
                         .spill(3);
+                        
                         padding-right: 0;
                     }
                     .price {
@@ -801,6 +817,7 @@ h2 {
                     p {
                         .spill(2);
                         font-size: 12px;
+                        max-height: 40px;
                         margin: 0;
                         color: #999;
                     }
