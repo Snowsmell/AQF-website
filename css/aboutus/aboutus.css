@@ -371,6 +371,9 @@ main .content article.current {
   }
 }
 @media (max-width: 960px) {
+  main .container {
+    overflow: hidden;
+  }
   main ul.leftnav {
     width: 100%;
     overflow: hidden;
