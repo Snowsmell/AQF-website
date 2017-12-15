@@ -207,6 +207,7 @@ h2 p {
   padding: 20px 15px;
   height: 150px;
   position: relative;
+  background-color: #fff;
 }
 .introduction .infolist div ul li > div h3 {
   color: #333;
@@ -445,7 +446,7 @@ h2 p {
 .lncenter ul li {
   display: inline-block;
   width: 18.75%;
-  height: 250px;
+  height: 260px;
   background-color: #fff;
   border: 1px solid #ddd;
   box-sizing: border-box;

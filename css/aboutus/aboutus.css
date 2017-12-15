@@ -59,8 +59,8 @@ main ul.leftnav li.current {
 }
 main .content {
   margin-left: 300px;
-  padding: 20px 40px;
-  margin-bottom: 70px;
+  padding: 20px 40px 60px;
+  margin-bottom: 90px;
 }
 main .content h2 {
   font-size: 16px;
@@ -411,6 +411,7 @@ main .content article.current {
   }
   main .content {
     margin-top: 50px;
+    margin-bottom: 50px;
   }
   main .content h2 {
     padding-bottom: 15px;
